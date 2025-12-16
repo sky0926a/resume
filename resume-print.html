@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Li - Senior Software Engineer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1a1a2e;
+            background: white;
+            padding: 40px 50px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #6366f1;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 14pt;
+            font-weight: 500;
+            color: #6366f1;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .contact-info a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 10.5pt;
+            color: #475569;
+            text-align: justify;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 16px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #6366f1;
+        }
+
+        .date {
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .experience-list {
+            padding-left: 18px;
+            margin-top: 8px;
+        }
+
+        .experience-list li {
+            margin-bottom: 4px;
+            font-size: 10pt;
+            color: #475569;
+        }
+
+        .experience-list li strong {
+            color: #1a1a2e;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .skill-category h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            font-size: 9pt;
+            padding: 2px 8px;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 4px;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .project-desc {
+            font-size: 10pt;
+            color: #475569;
+            margin-top: 2px;
+        }
+
+        .project-tech {
+            font-size: 9pt;
+            color: #6366f1;
+            margin-top: 4px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 10pt;
+            }
+
+
+
+            .experience-item,
+            .project-item,
+            .skill-category,
+            .education-card {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                margin: 15mm;
+                size: A4;
+            }
+        }
+
+        /* Download Button - Hidden in Print */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="download-btn" onclick="window.print()">📄 下載 PDF</button>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="name">Jimmy Li 李宗熙</h1>
+        <p class="title">Senior Software Engineer | iOS & Backend</p>
+        <div class="contact-info">
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                0917-248-751
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                sky0926a@gmail.com
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <a href="https://github.com/sky0926a">github.com/sky0926a</a>
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <a href="https://www.linkedin.com/in/jimmy-li-930468134/">linkedin.com/in/jimmy-li</a>
+            </span>
+        </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            資深軟體工程師，擁有超過 10 年的軟體開發經驗，包含企業級即時通訊平台開發。專精於 Swift iOS 應用開發與 Go 後端微服務架構，同時運用 Python 開發自動化工具與資料遷移腳本。
+            2019年9月加入 M800/CINNOX，在 iOS 領域深耕後，於 2024 年 3 月轉型後端工程師。
+            深度整合 WebRTC、CallKit、VoIP Push 等技術，成功交付 CINNOX iOS App 核心通話模組、ACD 佇列系統等關鍵專案。
+        </p>
+    </section>
+
+    <div class="two-column">
+        <div class="main-column">
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Senior Backend Engineer <span class="company">@ CINNOX /
+                                M800</span></span>
+                        <span class="date">Mar 2024 - Present</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>即時通訊平台核心開發：</strong>負責客服平台核心微服務開發，處理客服工單從建立、分配、轉接到結案的完整生命週期</li>
+                        <li><strong>智能話務分配系統：</strong>設計客服自動分配機制，實作 Round-robin、Most Idle、Simultaneous 等策略</li>
+                        <li><strong>批次簡訊系統優化：</strong>重構簡訊發送流程，優化 API 回應時間、減少資料庫操作、降低記憶體使用量</li>
+                        <li><strong>Webhook API 開發：</strong>提供 Webhook API 供外部服務串接，支援客戶資料同步與事件通知</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Senior iOS Engineer <span class="company">@ CINNOX / M800</span></span>
+                        <span class="date">Sep 2019 - Mar 2024</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>iOS App 核心開發：</strong>開發 CINNOX iOS App 通話功能，整合 WebRTC、CallKit、VoIP Push</li>
+                        <li><strong>模組化 SDK 開發：</strong>負責 CINNOX iOS App 多個核心 SDK 的開發與維護，包含底層網路與認證模組、通話功能模組、UI 業務邏輯模組
+                        </li>
+                        <li><strong>Visitor SDK：</strong>開發面向外部客戶的 Visitor SDK，提供進階功能與完整技術文件</li>
+                        <li><strong>團隊指導：</strong>擔任團隊成員導師，定期技術分享會議，促進團隊成長</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">iOS Engineer <span class="company">@ Taiwan Skyline</span></span>
+                        <span class="date">Mar 2019 - Sep 2019</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>開發原生遊戲應用程式，使用 GCDAsyncSocket、ProtocolBuffers 等技術</li>
+                        <li>透過實作 OpenSSL 及加密協定 (ECDSA/ECDH) 強化應用程式安全性</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">R&D Engineer <span class="company">@ ASUSTeK Computer Inc.</span></span>
+                        <span class="date">Mar 2018 - Feb 2019</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>維護並開發 Zenbo 機器人 iOS 應用程式，設計並實作 VoIP SDK</li>
+                        <li>使用 Node.js 開發 ASUS 智慧音箱雲端技能（導航功能）</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">iOS Engineer <span class="company">@ Environmental Management
+                                Consultants</span></span>
+                        <span class="date">Nov 2016 - Mar 2018</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>環境即時通 App：</strong>開發環保署空氣品質 App，百萬下載，榮獲資訊月百大創新產品獎、智慧城市創新應用獎</li>
+                        <li><strong>i-Plants：</strong>與農委會合作開發田間管理系統，獲中時電子報、農傳媒專題報導</li>
+                        <li><strong>畜牧場行動調查系統、農村資訊應用：</strong>開發多項政府合作專案</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Developer <span class="company">@ Coast Guard
+                                Administration</span></span>
+                        <span class="date">Dec 2015 - Nov 2016</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>網頁應用程式開發（義務役），人事及薪資系統開發與維護</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Developer <span class="company">@ Data Systems Consulting</span></span>
+                        <span class="date">Jun 2014 - Dec 2014</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>ERP 系統開發與維護，電子表單簽核系統開發</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="section">
+                <h2 class="section-title">Key Projects</h2>
+
+                <div class="project-item">
+                    <div class="project-title">CINNOX iOS Call Module (核心通話模組)</div>
+                    <p class="project-desc">開發 iOS App 核心通話功能，整合 WebRTC 音視訊、CallKit 原生通話體驗與會議通話</p>
+                    <p class="project-tech">Tech: Swift, WebRTC, CallKit, VoIP Push</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">模組化 SDK 架構開發</div>
+                    <p class="project-desc">負責 CINNOX iOS App 多個核心 SDK 的開發與維護：Core SDK (底層網路與認證)、Call SDK (VoIP
+                        通話功能)、UIKit (UI 業務邏輯)</p>
+                    <p class="project-tech">Tech: Swift, CocoaPods, Realm, MQTT</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">ACD Queue System (自動話務分配系統)</div>
+                    <p class="project-desc">設計並實作企業級 ACD 系統，支援 Round-robin、Most Idle、Simultaneous 等分配策略</p>
+                    <p class="project-tech">Tech: Go, MongoDB, Redis, gRPC</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">環境即時通 🏆 多次獲獎</div>
+                    <p class="project-desc">行政院環保署開放資料 App，App Store 累積百萬下載，2017-2018 資訊月百大創新產品獎、2018 智慧城市創新應用獎</p>
+                    <p class="project-tech">Tech: Swift, CoreLocation, APNS, MapKit</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">i-Plants 農作物田間管理系統</div>
+                    <p class="project-desc">與農委會合作開發，協助農民記錄農食流程生成產銷履歷，獲中時電子報、農傳媒專題報導</p>
+                    <p class="project-tech">Tech: Swift, CoreData, GPS, Offline</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">iShopper 電子發票優惠通 (Freelance)</div>
+                    <p class="project-desc">電子發票兌獎平台 App，提供發票 QRCode 掃描、載具條碼生成、財政部 API 串接與自動對獎</p>
+                    <p class="project-tech">Tech: Swift, AVFoundation, REST API</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Acer Halo 智慧音箱 (Freelance)</div>
+                    <p class="project-desc">Acer 智慧音箱 iOS 操控應用，提供裝置配對綁定、WiFi 配置與語音助理控制功能</p>
+                    <p class="project-tech">Tech: Swift, Bluetooth, mDNS, IoT</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="side-column">
+            <!-- Skills -->
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">Go (Golang)</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>iOS Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WebRTC</span>
+                        <span class="skill-tag">CallKit</span>
+                        <span class="skill-tag">UIKit</span>
+                        <span class="skill-tag">Realm</span>
+                        <span class="skill-tag">APNS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Backend & Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Architecture</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">gRPC</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">MQTT</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlights -->
+            <section class="section">
+                <h2 class="section-title">Highlights</h2>
+                <ul class="experience-list" style="padding-left: 16px;">
+                    <li>解決超過 <strong>500+</strong> 個技術 Issues</li>
+                    <li><strong>10+</strong> 年軟體開發經驗</li>
+                    <li>維護 <strong>4+</strong> 個 iOS SDK 模組</li>
+                    <li>深度整合 WebRTC/CallKit</li>
+                </ul>
+            </section>
+
+            <!-- Languages -->
+            <section class="section">
+                <h2 class="section-title">Languages</h2>
+                <ul class="experience-list" style="padding-left: 16px;">
+                    <li>中文（母語）</li>
+                    <li>英文（工作溝通）</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="project-item">
+                    <div class="project-title">東海大學 (Tunghai University)</div>
+                    <p class="project-desc">資訊工程學系學士 (2011 - 2015)</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

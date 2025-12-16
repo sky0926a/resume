@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy Li - Senior Software Engineer Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 11pt;
+            line-height: 1.5;
+            color: #1a1a2e;
+            background: white;
+            padding: 40px 50px;
+            max-width: 210mm;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #6366f1;
+            padding-bottom: 20px;
+            margin-bottom: 24px;
+        }
+
+        .name {
+            font-size: 28pt;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .title {
+            font-size: 14pt;
+            font-weight: 500;
+            color: #6366f1;
+            margin-bottom: 12px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .contact-info a {
+            color: #6366f1;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 12pt;
+            font-weight: 700;
+            color: #6366f1;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 6px;
+            margin-bottom: 12px;
+        }
+
+        /* Summary */
+        .summary {
+            font-size: 10.5pt;
+            color: #475569;
+            text-align: justify;
+        }
+
+        /* Experience */
+        .experience-item {
+            margin-bottom: 16px;
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 4px;
+        }
+
+        .job-title {
+            font-size: 11pt;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .company {
+            font-weight: 500;
+            color: #6366f1;
+        }
+
+        .date {
+            font-size: 10pt;
+            color: #64748b;
+        }
+
+        .experience-list {
+            padding-left: 18px;
+            margin-top: 8px;
+        }
+
+        .experience-list li {
+            margin-bottom: 4px;
+            font-size: 10pt;
+            color: #475569;
+        }
+
+        .experience-list li strong {
+            color: #1a1a2e;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .skill-category h4 {
+            font-size: 10pt;
+            font-weight: 600;
+            color: #1a1a2e;
+            margin-bottom: 4px;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+        }
+
+        .skill-tag {
+            font-size: 9pt;
+            padding: 2px 8px;
+            background: #f1f5f9;
+            color: #475569;
+            border-radius: 4px;
+        }
+
+        /* Projects */
+        .project-item {
+            margin-bottom: 12px;
+        }
+
+        .project-title {
+            font-size: 10.5pt;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        .project-desc {
+            font-size: 10pt;
+            color: #475569;
+            margin-top: 2px;
+        }
+
+        .project-tech {
+            font-size: 9pt;
+            color: #6366f1;
+            margin-top: 4px;
+        }
+
+        /* Two Column Layout */
+        .two-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                padding: 0;
+                font-size: 10pt;
+            }
+
+
+
+            .experience-item,
+            .project-item,
+            .skill-category,
+            .education-card {
+                page-break-inside: avoid;
+            }
+
+            @page {
+                margin: 15mm;
+                size: A4;
+            }
+        }
+
+        /* Download Button - Hidden in Print */
+        .download-btn {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 12px 24px;
+            background: #6366f1;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+            transition: all 0.2s;
+        }
+
+        .download-btn:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        @media print {
+            .download-btn {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <button class="download-btn" onclick="window.print()">📄 Download PDF</button>
+
+    <!-- Header -->
+    <header class="header">
+        <h1 class="name">Jimmy Li 李宗熙</h1>
+        <p class="title">Senior Software Engineer | iOS & Backend</p>
+        <div class="contact-info">
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+                0917-248-751
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+                sky0926a@gmail.com
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                </svg>
+                <a href="https://github.com/sky0926a">github.com/sky0926a</a>
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"
+                    style="vertical-align: middle; margin-right: 4px;">
+                    <path
+                        d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                </svg>
+                <a href="https://www.linkedin.com/in/jimmy-li-930468134/">linkedin.com/in/jimmy-li</a>
+            </span>
+        </div>
+    </header>
+
+    <!-- Summary -->
+    <section class="section">
+        <h2 class="section-title">Professional Summary</h2>
+        <p class="summary">
+            Senior Software Engineer with over 10 years of experience in enterprise-grade real-time communication
+            platform development. Specialized in Swift iOS development and Go backend microservices architecture, with
+            Python for automation tools and data migration scripts.
+            Joined M800/CINNOX in September 2019, transitioned from iOS to backend engineering in March 2024.
+            Deep integration experience with WebRTC, CallKit, VoIP Push, successfully delivering CINNOX iOS App core
+            call module, ACD queue system, and other key projects.
+        </p>
+    </section>
+
+    <div class="two-column">
+        <div class="main-column">
+            <!-- Experience -->
+            <section class="section">
+                <h2 class="section-title">Work Experience</h2>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Senior Backend Engineer <span class="company">@ CINNOX /
+                                M800</span></span>
+                        <span class="date">Mar 2024 - Present</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>Real-time Communication Platform:</strong> Developed core microservices for customer
+                            service platform, handling complete ticket lifecycle from creation to closure</li>
+                        <li><strong>Intelligent Call Distribution:</strong> Designed automatic distribution mechanism
+                            implementing Round-robin, Most Idle, Simultaneous strategies</li>
+                        <li><strong>Bulk SMS System Optimization:</strong> Refactored SMS workflow, optimized API
+                            response time, reduced DB operations, lowered memory usage</li>
+                        <li><strong>Webhook API Development:</strong> Developed Webhook APIs for external integration,
+                            supporting customer data sync and event notifications</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Senior iOS Engineer <span class="company">@ CINNOX / M800</span></span>
+                        <span class="date">Sep 2019 - Mar 2024</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>iOS App Core Development:</strong> Developed CINNOX iOS App calling features,
+                            integrating WebRTC, CallKit, VoIP Push</li>
+                        <li><strong>Modular SDK Development:</strong> Developed and maintained multiple core SDKs
+                            including network/auth module, call module, UI business logic module
+                        </li>
+                        <li><strong>Visitor SDK:</strong> Developed customer-facing Visitor SDK with advanced features
+                            and documentation</li>
+                        <li><strong>Team Mentoring:</strong> Mentored team members and organized regular tech sharing
+                            sessions</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">iOS Engineer <span class="company">@ Taiwan Skyline</span></span>
+                        <span class="date">Mar 2019 - Sep 2019</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Developed native gaming applications using GCDAsyncSocket, ProtocolBuffers</li>
+                        <li>Enhanced security by implementing OpenSSL and encryption protocols (ECDSA/ECDH)</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">R&D Engineer <span class="company">@ ASUSTeK Computer Inc.</span></span>
+                        <span class="date">Mar 2018 - Feb 2019</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Maintained and developed Zenbo Robot iOS app, designed and implemented VoIP SDK</li>
+                        <li>Developed ASUS smart speaker cloud skill using Node.js (navigation feature)</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">iOS Engineer <span class="company">@ Environmental Management
+                                Consultants</span></span>
+                        <span class="date">Nov 2016 - Mar 2018</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li><strong>Environmental Push App:</strong> Developed EPA air quality App,
+                            1M+ downloads, won Information Month Top 100 Innovation Award and Smart City Award</li>
+                        <li><strong>i-Plants:</strong> Collaborated with Council of Agriculture to develop field
+                            management system, featured in media</li>
+                        <li><strong>Livestock Survey & Rural Info Apps:</strong> Developed multiple government
+                            collaboration projects</li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Developer <span class="company">@ Coast Guard
+                                Administration</span></span>
+                        <span class="date">Dec 2015 - Nov 2016</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>Web application development (Military Service), personnel and payroll system development
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="experience-item">
+                    <div class="experience-header">
+                        <span class="job-title">Developer <span class="company">@ Data Systems Consulting</span></span>
+                        <span class="date">Jun 2014 - Dec 2014</span>
+                    </div>
+                    <ul class="experience-list">
+                        <li>ERP system development and maintenance, electronic form approval system</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Key Projects -->
+            <section class="section">
+                <h2 class="section-title">Key Projects</h2>
+
+                <div class="project-item">
+                    <div class="project-title">CINNOX iOS Call Module</div>
+                    <p class="project-desc">Developed iOS App core calling features, integrating WebRTC audio/video,
+                        CallKit native experience, and conference calling</p>
+                    <p class="project-tech">Tech: Swift, WebRTC, CallKit, VoIP Push</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Modular SDK Architecture</div>
+                    <p class="project-desc">Developed and maintained multiple core SDKs: Core SDK (network/auth), Call
+                        SDK (VoIP calling), UIKit (UI business logic)</p>
+                    <p class="project-tech">Tech: Swift, CocoaPods, Realm, MQTT</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">ACD Queue System</div>
+                    <p class="project-desc">Designed and implemented enterprise ACD system with Round-robin, Most Idle,
+                        Simultaneous distribution strategies</p>
+                    <p class="project-tech">Tech: Go, MongoDB, Redis, gRPC</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Environmental Push 🏆 Award Winner</div>
+                    <p class="project-desc">Taiwan EPA open data App with 1M+ downloads, won 2017-2018 Information Month
+                        Top 100 Innovation Award and 2018 Smart City Award</p>
+                    <p class="project-tech">Tech: Swift, CoreLocation, APNS, MapKit</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">i-Plants Crop Field Management System</div>
+                    <p class="project-desc">Collaborated with Council of Agriculture, helping farmers record
+                        agricultural processes and generate traceability records</p>
+                    <p class="project-tech">Tech: Swift, CoreData, GPS, Offline</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">iShopper E-Invoice App (Freelance)</div>
+                    <p class="project-desc">E-invoice lottery platform with QRCode scanning, carrier barcode generation,
+                        Ministry of Finance API integration</p>
+                    <p class="project-tech">Tech: Swift, AVFoundation, REST API</p>
+                </div>
+
+                <div class="project-item">
+                    <div class="project-title">Acer Halo Smart Speaker (Freelance)</div>
+                    <p class="project-desc">iOS control app for Acer Smart Speaker with device pairing, WiFi
+                        configuration, and voice assistant control</p>
+                    <p class="project-tech">Tech: Swift, Bluetooth, mDNS, IoT</p>
+                </div>
+            </section>
+        </div>
+
+        <div class="side-column">
+            <!-- Skills -->
+            <section class="section">
+                <h2 class="section-title">Technical Skills</h2>
+
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Swift</span>
+                        <span class="skill-tag">Go (Golang)</span>
+                        <span class="skill-tag">Python</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>iOS Development</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">WebRTC</span>
+                        <span class="skill-tag">CallKit</span>
+                        <span class="skill-tag">UIKit</span>
+                        <span class="skill-tag">Realm</span>
+                        <span class="skill-tag">APNS</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Backend & Cloud</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Architecture</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Microservices</span>
+                        <span class="skill-tag">gRPC</span>
+                        <span class="skill-tag">REST API</span>
+                        <span class="skill-tag">MQTT</span>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Highlights -->
+            <section class="section">
+                <h2 class="section-title">Highlights</h2>
+                <ul class="experience-list" style="padding-left: 16px;">
+                    <li>Resolved <strong>500+</strong> technical issues</li>
+                    <li><strong>10+</strong> years of software development</li>
+                    <li>Maintained <strong>4+</strong> iOS SDK modules</li>
+                    <li>Deep WebRTC/CallKit integration</li>
+                </ul>
+            </section>
+
+            <!-- Languages -->
+            <section class="section">
+                <h2 class="section-title">Languages</h2>
+                <ul class="experience-list" style="padding-left: 16px;">
+                    <li>Chinese (Native)</li>
+                    <li>English (Professional)</li>
+                </ul>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="project-item">
+                    <div class="project-title">Tunghai University</div>
+                    <p class="project-desc">B.S. in Computer Science (2011 - 2015)</p>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>

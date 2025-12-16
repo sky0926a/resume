@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Jimmy Li - 資深軟體工程師 | Senior Software Engineer | iOS, Go, Python, Swift, MongoDB, AWS">
+    <meta name="keywords"
+        content="Software Engineer, iOS Developer, Backend Engineer, Go, Swift, Python, MongoDB, AWS, Microservices">
+    <title>Jimmy Li | Senior Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">{</span>
+                <span class="logo-text">JL</span>
+                <span class="logo-bracket">}</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume-print.html" class="nav-link nav-print" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16"
+                            height="16" style="vertical-align: middle; margin-right: 4px;">
+                            <polyline points="6 9 6 2 18 2 18 9" />
+                            <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2" />
+                            <rect x="6" y="14" width="12" height="8" />
+                        </svg>
+                        Print
+                    </a></li>
+                <li><a href="index-en.html" class="nav-link">EN</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">Hello, I'm</p>
+                <h1 class="hero-name">
+                    <span class="name-highlight">Jimmy</span> Li
+                </h1>
+                <h2 class="hero-title">
+                    <span class="typing-text">Senior Software Engineer</span>
+                    <span class="cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    專注於 iOS 應用與後端系統開發<br>
+                    擅長即時通訊、WebRTC 與微服務架構設計
+                </p>
+                <div class="hero-cta">
+                    <a href="#experience" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="file-name">main.go</span>
+                    </div>
+                    <pre class="code-content"><code><span class="keyword">package</span> main
+
+<span class="keyword">func</span> <span class="function">main</span>() {
+    engineer := <span class="type">Engineer</span>{
+        Name:       <span class="string">"Jimmy Li"</span>,
+        Role:       <span class="string">"Full-Stack"</span>,
+        Experience: <span class="number">10</span>+ years,
+        Skills:     []<span class="type">string</span>{
+            <span class="string">"Swift"</span>, <span class="string">"Go"</span>,
+            <span class="string">"iOS SDK"</span>, <span class="string">"WebRTC"</span>,
+            <span class="string">"MongoDB"</span>,
+        },
+    }
+    engineer.<span class="function">BuildAwesomeThings</span>()
+}</code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span>
+                About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        我是一位擁有超過 <strong>10 年經驗</strong> 的資深軟體工程師，專注於 <strong>iOS 應用</strong> 與 <strong>後端服務</strong>
+                        的開發。
+                        目前任職於 <strong>CINNOX / M800</strong>，負責企業級即時通訊平台的 iOS App 及後端系統開發。
+                    </p>
+                    <p>
+                        我的專長在於使用 <strong>Swift</strong> 開發 iOS 應用程式，並使用 <strong>Go</strong>
+                        建構後端微服務，同時運用 <strong>Python</strong> 開發自動化工具與資料遷移腳本。
+                        擁有豐富的 <strong>WebRTC</strong>、<strong>CallKit</strong>、即時通訊協議整合經驗。
+                    </p>
+                    <p>
+                        在過去的工作中，我成功交付多項關鍵專案：
+                    </p>
+                    <ul class="about-highlights">
+                        <li>開發 CINNOX iOS App 核心通話功能</li>
+                        <li>整合 WebRTC 與 CallKit 實現 VoIP 通話</li>
+                        <li>設計並實作自動分配佇列系統 (ACD)</li>
+                        <li>開發 WhatsApp Business API 整合方案</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number">500+</span>
+                        <span class="stat-label">Issues Resolved</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">10+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">Microservices</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">99.9%</span>
+                        <span class="stat-label">Uptime Target</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section experience">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span>
+                Experience
+            </h2>
+            <div class="timeline">
+                <!-- Backend Engineer Role -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Senior Backend Engineer</h3>
+                            <span class="timeline-company">CINNOX / M800</span>
+                        </div>
+                        <span class="timeline-date">Mar 2024 - Present</span>
+                        <ul class="timeline-description">
+                            <li>
+                                <strong>即時通訊平台核心開發</strong>：負責客服平台核心微服務開發，處理客服工單從建立、分配、轉接到結案的完整生命週期管理
+                            </li>
+                            <li>
+                                <strong>智能話務分配系統</strong>：設計客服自動分配機制，實作 Round-robin、Most Idle、Simultaneous
+                                等策略，並將分配紀錄同步至數據分析平台
+                            </li>
+                            <li>
+                                <strong>批次簡訊系統優化</strong>：重構簡訊發送流程，優化 API 回應時間、減少資料庫操作次數、降低記憶體使用量
+                            </li>
+                            <li>
+                                <strong>聊天室列表優化</strong>：擴充聊天室分類類型，優化列表查詢效能與分頁機制
+                            </li>
+                            <li>
+                                <strong>Webhook API 開發</strong>：提供 Webhook API 供外部服務串接，支援客戶資料同步與事件通知
+                            </li>
+                            <li>
+                                <strong>資料庫效能優化</strong>：分析慢查詢日誌，建立複合索引 (Compound Index)、設定 TTL 自動過期，提升查詢效率
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Go</span>
+                            <span class="tech-tag">Gin</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">Kafka</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">NATS</span>
+
+                            <span class="tech-tag">Kubernetes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Senior iOS Engineer Role -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Senior iOS Engineer</h3>
+                            <span class="timeline-company">CINNOX / M800</span>
+                        </div>
+                        <span class="timeline-date">Sep 2019 - Mar 2024</span>
+                        <ul class="timeline-description">
+                            <li>
+                                <strong>iOS App 核心開發</strong>：開發 CINNOX iOS App 通話功能，包含 WebRTC 整合、CallKit
+                                實作、音視訊通話等核心模組
+                            </li>
+                            <li>
+                                <strong>模組化 SDK 開發</strong>：負責 CINNOX iOS App 多個核心 SDK 的開發與維護，包含底層網路與認證模組、通話功能模組、UI
+                                業務邏輯模組
+                            </li>
+                            <li>
+                                <strong>通話功能優化</strong>：解決 WebRTC 連線問題、網路切換、會議通話重新加入等複雜場景
+                            </li>
+                            <li>
+                                <strong>UI/UX 開發</strong>：實作圖片/影片選擇器、未讀訊息面板、導航列優化等 UI 元件
+                            </li>
+                            <li>
+                                <strong>第三方整合</strong>：整合 Salesforce SDK、APNS/VoIP Push、Realm 資料庫
+                            </li>
+                            <li>
+                                <strong>Visitor SDK 開發</strong>：開發面向外部客戶的 Visitor SDK，提供進階功能與完整技術文件
+                            </li>
+                            <li>
+                                <strong>團隊指導與技術分享</strong>：擔任團隊成員導師，定期技術分享會議，促進團隊成長
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Objective-C</span>
+                            <span class="tech-tag">WebRTC</span>
+                            <span class="tech-tag">CallKit</span>
+                            <span class="tech-tag">UIKit</span>
+                            <span class="tech-tag">Realm</span>
+                            <span class="tech-tag">APNS</span>
+                            <span class="tech-tag">CocoaPods</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iOS Engineer - Taiwan Skyline -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">iOS Engineer</h3>
+                            <span class="timeline-company">Taiwan Skyline Worldwide Limited</span>
+                        </div>
+                        <span class="timeline-date">Mar 2019 - Sep 2019</span>
+                        <ul class="timeline-description">
+                            <li>
+                                開發原生遊戲應用程式，強化 iOS 框架以提升效能與使用者體驗
+                            </li>
+                            <li>
+                                使用 GCDAsyncSocket、ProtocolBuffers、JSPatch、CAAnimation 等技術整合進階功能
+                            </li>
+                            <li>
+                                透過實作 OpenSSL 及加密協定 (ECDSA/ECDH) 強化應用程式安全性
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Objective-C</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">GCDAsyncSocket</span>
+                            <span class="tech-tag">ProtocolBuffers</span>
+                            <span class="tech-tag">OpenSSL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- R&D Engineer - ASUS -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">R&D Engineer</h3>
+                            <span class="timeline-company">ASUSTeK Computer Inc.</span>
+                        </div>
+                        <span class="timeline-date">Mar 2018 - Feb 2019</span>
+                        <ul class="timeline-description">
+                            <li>
+                                維護並開發 Zenbo 機器人的 iOS 應用程式
+                            </li>
+                            <li>
+                                設計並實作 VoIP SDK，支援跨裝置的即時通訊功能
+                            </li>
+                            <li>
+                                使用 Node.js 開發 ASUS 智慧音箱雲端技能，專注於導航功能，讓使用者可透過音箱獲取路線及位置資訊
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">VoIP</span>
+                            <span class="tech-tag">APNS</span>
+                            <span class="tech-tag">Azure</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- iOS Engineer - Environmental Management -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">iOS Engineer</h3>
+                            <span class="timeline-company">Environmental Management Consultants Technologies Inc.</span>
+                        </div>
+                        <span class="timeline-date">Nov 2016 - Mar 2018</span>
+                        <ul class="timeline-description">
+                            <li>
+                                <strong>環境即時通 App</strong>：開發行政院環保署空氣品質 App，App Store 累積百萬下載，榮獲 2017-2018
+                                資訊月百大創新產品獎、2018 智慧城市創新應用獎
+                            </li>
+                            <li>
+                                <strong>i-Plants 農食履歷系統</strong>：與農委會合作開發田間管理系統，獲中時電子報、農傳媒專題報導
+                            </li>
+                            <li>
+                                <strong>畜牧場行動調查系統</strong>：開發畜牧場登記資料查詢與通報功能，整合 Google 路徑規劃
+                            </li>
+                            <li>
+                                <strong>農村資訊應用</strong>：一個月內主導完成 UI 設計與開發，獲得主管認同
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">CoreLocation</span>
+                            <span class="tech-tag">MapKit</span>
+                            <span class="tech-tag">Charts</span>
+                            <span class="tech-tag">MQTT</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer - Coast Guard -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Developer</h3>
+                            <span class="timeline-company">Coast Guard Administration, Ocean Affairs Council</span>
+                        </div>
+                        <span class="timeline-date">Dec 2015 - Nov 2016</span>
+                        <ul class="timeline-description">
+                            <li>
+                                網頁應用程式開發（義務役）
+                            </li>
+                            <li>
+                                人事及薪資系統開發與維護
+                            </li>
+                            <li>
+                                退休金試算系統開發
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">Web Development</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer - Data Systems -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <h3 class="timeline-title">Developer</h3>
+                            <span class="timeline-company">Data Systems Consulting Co., LTD</span>
+                        </div>
+                        <span class="timeline-date">Jun 2014 - Dec 2014</span>
+                        <ul class="timeline-description">
+                            <li>
+                                ERP 系統開發與維護
+                            </li>
+                            <li>
+                                電子表單簽核系統開發
+                            </li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span class="tech-tag">ERP</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span>
+                Education
+            </h2>
+            <div class="education-card">
+                <div class="education-header">
+                    <div class="education-info">
+                        <h3 class="education-degree">資訊工程學系學士</h3>
+                        <span class="education-school">東海大學 (Tunghai University)</span>
+                    </div>
+                    <span class="education-date">2011 - 2015</span>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Programming Languages</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Swift</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Go (Golang)</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" />
+                            <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                            <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </div>
+                    <h3>Databases</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Redis</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQLite</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>Cloud & DevOps</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kubernetes</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Docker</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" />
+                            <polyline points="2 17 12 22 22 17" />
+                            <polyline points="2 12 12 17 22 12" />
+                        </svg>
+                    </div>
+                    <h3>iOS & Real-time</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">WebRTC / CallKit</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UIKit / Realm</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">APNS / VoIP Push</span>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                Key Projects
+            </h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS Core</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">CINNOX iOS Call Module</h3>
+                    <p class="project-description">
+                        開發 CINNOX iOS App 核心通話功能，整合 WebRTC 實現即時音視訊通話、
+                        CallKit 支援原生通話體驗及會議通話功能。
+                    </p>
+                    <ul class="project-features">
+                        <li>WebRTC 音視訊通話整合</li>
+                        <li>CallKit 原生通話 UI</li>
+                        <li>會議通話功能</li>
+                        <li>通話轉接與錄音功能</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>WebRTC</span>
+                        <span>CallKit</span>
+                        <span>VoIP Push</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS SDK</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">模組化 SDK 架構開發</h3>
+                    <p class="project-description">
+                        負責 CINNOX iOS App 多個核心 SDK 的開發與維護，
+                        實現高度模組化的程式碼架構，提升程式碼複用性與可維護性。
+                    </p>
+                    <ul class="project-features">
+                        <li>Core SDK：底層網路層、認證與資料同步</li>
+                        <li>Call SDK：VoIP 通話核心功能封裝</li>
+                        <li>UIKit：UI 業務邏輯與可重用元件</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>CocoaPods</span>
+                        <span>Realm</span>
+                        <span>MQTT</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Automation</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Chat Auto-Pickup System</h3>
+                    <p class="project-description">
+                        開發智能客服自動接聽功能，根據員工狀態自動分配 Chat Inquiry，
+                        提升客服回應效率。支援 Chatbot 轉接人工客服的無縫銜接。
+                    </p>
+                    <ul class="project-features">
+                        <li>智能狀態偵測與分配</li>
+                        <li>Chatbot 轉接人工機制</li>
+                        <li>失敗重試與降級策略</li>
+                        <li>即時通知推送</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Go</span>
+                        <span>WebSocket</span>
+                        <span>NATS</span>
+                        <span>MongoDB</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 20h9" />
+                            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Performance</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Database Performance Optimization</h3>
+                    <p class="project-description">
+                        識別並解決 MongoDB 慢查詢問題，透過分析查詢計畫、建立複合索引、
+                        優化聚合管線，大幅提升系統查詢效能。
+                    </p>
+                    <ul class="project-features">
+                        <li>慢查詢分析與優化</li>
+                        <li>複合索引設計</li>
+                        <li>聚合管線優化</li>
+                        <li>連線池效能調校</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>MongoDB</span>
+                        <span>Indexing</span>
+                        <span>Aggregation</span>
+                        <span>Profiling</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Award</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">環境即時通</h3>
+                    <p class="project-description">
+                        行政院環保署開放資料服務 App，App Store 累積超過百萬下載，常駐天氣類百大名單，
+                        iOS 端每日活躍用戶超過 2000 人。
+                    </p>
+                    <ul class="project-features">
+                        <li>🏆 2017-2018 資訊月百大創新產品獎</li>
+                        <li>🏆 2018 智慧城市創新應用獎</li>
+                        <li>GPS 定位與 Geofence 軌跡紀錄</li>
+                        <li>APNS 即時空氣品質推播</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>CoreLocation</span>
+                        <span>APNS</span>
+                        <span>MapKit</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Gov Project</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">i-Plants 農作物田間管理系統</h3>
+                    <p class="project-description">
+                        與行政院農委會合作開發，協助農民記錄農食流程，從田間耕作到終端銷售生成產銷履歷。
+                    </p>
+                    <ul class="project-features">
+                        <li>📰 中時電子報、農傳媒專題報導</li>
+                        <li>GPS 定位與離線作業功能</li>
+                        <li>產銷履歷 QRCode 生成</li>
+                        <li>田間作業紀錄與上傳</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>CoreData</span>
+                        <span>GPS</span>
+                        <span>Offline</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                            <line x1="1" y1="10" x2="23" y2="10" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Freelance</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">iShopper 電子發票優惠通</h3>
+                    <p class="project-description">
+                        電子發票兌獎及掃描平台 App，提供發票 QRCode 掃描、載具條碼生成、
+                        財政部發票清單撈取與中獎金額計算功能。
+                    </p>
+                    <ul class="project-features">
+                        <li>發票 QRCode 掃描解析</li>
+                        <li>手機條碼載具整合</li>
+                        <li>財政部 API 串接</li>
+                        <li>自動對獎與通知</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>AVFoundation</span>
+                        <span>REST API</span>
+                        <span>QRCode</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <polygon points="10 8 16 12 10 16 10 8" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Freelance</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Acer Halo 智慧音箱</h3>
+                    <p class="project-description">
+                        Acer 智慧音箱的 iOS 操控應用程式，提供裝置配對綁定、語音助理控制等功能。
+                    </p>
+                    <ul class="project-features">
+                        <li>裝置配對與綁定流程</li>
+                        <li>智慧音箱遠端控制</li>
+                        <li>WiFi 配置功能</li>
+                        <li>語音助理整合</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>Bluetooth</span>
+                        <span>mDNS</span>
+                        <span>IoT</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                Get In Touch
+            </h2>
+            <div class="contact-content">
+                <p class="contact-text">
+                    我目前正在尋找新的職涯機會，特別是<strong>資深後端工程師</strong>相關職位。<br>
+                    如果您有任何合作機會或想法，歡迎與我聯繫！
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:sky0926a@gmail.com" class="contact-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        <span>Email Me</span>
+                    </a>
+                    <a href="https://github.com/sky0926a" target="_blank" rel="noopener" class="contact-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/jimmy-li-930468134/" target="_blank" rel="noopener"
+                        class="contact-btn">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                        <span>LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>Designed & Built by Jimmy Li</p>
+            <p class="footer-tech">Built with HTML, CSS & JavaScript</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
