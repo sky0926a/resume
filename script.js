@@ -50,14 +50,14 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
-    
+
     // Add shadow when scrolled
     if (currentScroll > 50) {
         navbar?.classList.add('scrolled');
     } else {
         navbar?.classList.remove('scrolled');
     }
-    
+
     lastScroll = currentScroll;
 });
 
@@ -88,26 +88,7 @@ document.querySelectorAll('.section').forEach(section => {
     });
 });
 
-// ===== Skill Bar Animation =====
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const skillBars = entry.target.querySelectorAll('.skill-progress');
-            skillBars.forEach(bar => {
-                const width = bar.style.width;
-                bar.style.width = '0';
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-            skillObserver.unobserve(entry.target);
-        }
-    });
-}, { threshold: 0.3 });
 
-document.querySelectorAll('.skill-category').forEach(category => {
-    skillObserver.observe(category);
-});
 
 // ===== Typing Effect for Hero Title =====
 class TypeWriter {
@@ -123,7 +104,7 @@ class TypeWriter {
 
     type() {
         const currentWord = this.words[this.currentWordIndex % this.words.length];
-        
+
         if (this.isDeleting) {
             this.text = currentWord.substring(0, this.text.length - 1);
         } else {
@@ -170,7 +151,7 @@ function animateCounter(element, target, duration = 2000) {
     const start = 0;
     const increment = target / (duration / 16);
     let current = start;
-    
+
     const timer = setInterval(() => {
         current += increment;
         if (current >= target) {
@@ -190,7 +171,7 @@ const statObserver = new IntersectionObserver((entries) => {
                 const text = statNumber.textContent;
                 const number = parseInt(text.replace(/\D/g, ''));
                 const suffix = text.replace(/[\d.]/g, '');
-                
+
                 if (!isNaN(number)) {
                     statNumber.dataset.suffix = suffix;
                     statNumber.dataset.animated = 'true';
@@ -211,11 +192,11 @@ const navLinksAll = document.querySelectorAll('.nav-link');
 
 window.addEventListener('scroll', () => {
     let current = '';
-    
+
     sections.forEach(section => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.offsetHeight;
-        
+
         if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
             current = section.getAttribute('id');
         }
@@ -234,7 +215,7 @@ document.addEventListener('mousemove', (e) => {
     const orbs = document.querySelectorAll('.gradient-orb');
     const x = e.clientX / window.innerWidth;
     const y = e.clientY / window.innerHeight;
-    
+
     orbs.forEach((orb, index) => {
         const speed = (index + 1) * 20;
         const xOffset = (x - 0.5) * speed;
@@ -253,7 +234,7 @@ console.log(`
 %c                                        
 %c 👋 Hey there, fellow developer!
 %c Looking to hire? Let's talk!
-`, 
+`,
     'color: #6366f1; font-weight: bold;',
     'color: #7c3aed; font-weight: bold;',
     'color: #8b5cf6; font-weight: bold;',
