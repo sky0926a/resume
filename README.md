@@ -1,6 +1,7 @@
 # Jimmy Li - Bilingual Senior Software Engineer Resume
 
-一個現代化的雙語履歷網頁，專為後端資深工程師職位設計，支援網頁互動版與 A4 列印列版。
+一個現代化的雙語履歷網頁，專為後端資深工程師職位設計，支援網頁互動版與 A4 列印版。
+本 repo 為公開站點，主要保存產生後的靜態檔案。
 
 ## 🚀 特色
 
@@ -11,6 +12,7 @@
 - **完全響應式**：支援桌面、平板和手機裝置
 - **效能優化**：使用 Intersection Observer 進行懶載入
 - **無框架依賴**：純 HTML、CSS、JavaScript 實作
+- **公開部署友善**：純靜態檔案，可直接部署到 GitHub Pages
 
 ## 📁 檔案結構
 
@@ -24,8 +26,6 @@ resume/
 ├── script.js            # 網頁版互動邏輯
 └── README.md            # 說明文件
 ```
-
-> **注意**：`resume-print*.html` 檔案內含獨立 CSS 樣式，不依賴 `styles.css`，以確保列印樣式的一致性。
 
 ## 🌐 部署到 GitHub Pages
 
@@ -61,12 +61,8 @@ git push -u origin main
 
 ## 📝 自訂內容
 
-由於本專案包含雙語及列印版，修改內容時請確保 **同時更新** 以下檔案：
-
-1. `index.html` (中文網頁)
-2. `index-en.html` (英文網頁)
-3. `resume-print.html` (中文列印)
-4. `resume-print-en.html` (英文列印)
+請在私有 repo 更新資料後再重新生成。  
+不建議直接手動修改生成的 HTML 檔案，避免下次生成時被覆蓋。
 
 ### 主要修改區塊
 
