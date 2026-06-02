@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmy Li 李宗熙 - Senior Software Engineer | iOS &amp; Backend Resume</title>
+    <title>Jimmy Li 李宗熙 - Senior Software Engineer | Go Distributed Backend &amp; iOS SDK · AI-Augmented Engineering Resume</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -228,7 +228,7 @@
 
     <header class="header">
         <h1 class="name">Jimmy Li 李宗熙</h1>
-        <p class="title">Senior Software Engineer | iOS &amp; Backend</p>
+        <p class="title">Senior Software Engineer | Go Distributed Backend &amp; iOS SDK · AI-Augmented Engineering</p>
         <div class="contact-info">
             <span class="contact-item">0917-248-751</span>
             <span class="contact-item">sky0926a@gmail.com</span>
@@ -239,7 +239,7 @@
 
     <section class="section">
         <h2 class="section-title">Professional Summary</h2>
-        <p class="summary">資深軟體工程師，擁有超過 10 年的軟體開發經驗，包含企業級即時通訊平台開發。專精於 Swift iOS 應用開發與 Go 後端微服務架構，同時運用 Python 開發自動化工具與資料遷移腳本。2019 年 9 月加入 M800/CINNOX，在 iOS 領域深耕後，於 2024 年 3 月轉型後端工程師。深度整合 WebRTC、CallKit、VoIP Push 等技術，成功交付 CINNOX iOS App 核心通話模組、ACD 佇列系統等關鍵專案。</p>
+        <p class="summary">資深軟體工程師,<strong>10+ 年資歷,其中 6+ 年在 M800/CINNOX 同一個企業級客服 SaaS 平台</strong>。目前主要做 Go 後端,負責分散式 session 狀態機、platform control plane,以及橫跨平台微服務的 MongoDB 效能與跨服務可靠性的長期治理工作。長期擔任公司內部 iOS 核心 SDK 的實作者(VoIP 信令、auth / session / presence / messaging),後來產品化為對外的商用 SDK。近期投入 <strong>AI 協作工程</strong>,寫 Skill、MCP 工具與 Agent,把資深判斷變成團隊可重用的能力。</p>
     </section>
 
     <div class="two-column">
@@ -248,27 +248,31 @@
                 <h2 class="section-title">Work Experience</h2>
                 <div class="experience-item">
                     <div class="experience-header">
-                        <span class="job-title">Senior Backend Engineer <span class="company">@ CINNOX / M800</span></span>
+                        <span class="job-title">Senior Software Engineer — Go Backend <span class="company">@ M800 (Product: CINNOX)</span></span>
                         <span class="date">Mar 2024 - Present</span>
                     </div>
                     <ul class="experience-list">
-                        <li>即時通訊平台核心開發：負責客服平台核心微服務開發，處理客服工單從建立、分配、轉接到結案的完整生命週期。</li>
-                        <li>智能話務分配系統：設計客服自動分配機制，實作 Round-robin、Most Idle、Simultaneous 等策略。</li>
-                        <li>批次簡訊系統優化：重構簡訊發送流程，優化 API 回應時間、減少資料庫操作、降低記憶體使用量。</li>
-                        <li>Webhook API 開發：提供 Webhook API 供外部服務串接，支援客戶資料同步與事件通知。</li>
+                        <li>負責 <strong>分散式 session 狀態機</strong>(建立 / 接聽 / 轉接 / 結束)—— <strong>session affinity</strong>、timeout + <strong>lock TTL</strong>、no-target fallback,以及帶階段 timeout 處理的 <strong>優先權工作分派佇列</strong>。Journey 與 history 事件透過 <strong>Kafka</strong> 發佈至 analytics,讓 SRE / 產品端可自助追蹤完整生命週期。</li>
+                        <li>以 <strong>Go + Gin + MongoDB</strong> 建置 <strong>platform control plane</strong> 後端:service、member、routing rule、destination 設定與第三方身份整合。<strong>Routing rule 與 fan-out 通知策略</strong> 改為由平台設定自動產生;吃資源的同步權限 cron 改為 <strong>非同步事件驅動</strong>;排程通知以 <strong>NATS</strong> task callback 整合 —— 將人工設定收攏為自動化平台能力。</li>
+                        <li>主導批次 messaging 於 10 萬筆規模下 <strong>OOM</strong> 的線上事故處理與架構重寫:三段式架構(<strong>批次入列 + Token Bucket + 固定 worker pool</strong>),所有參數以真實流量調校。記憶體峰值 <strong>3GB → 600MB</strong>、吞吐量 <strong>10×</strong>(5 萬 → 50 萬)。</li>
+                        <li>持續性的 <strong>MongoDB 資料層治理</strong>:<strong>ESR 複合索引設計</strong>、snapshot 索引、以查詢重寫消除 slow query、<strong>write concern majority</strong> / <strong>read preference</strong> 調校。關鍵查詢 p95 <strong>數秒 → &lt;100ms</strong>,納入日常維運。</li>
+                        <li>以 <strong>resilience 工具組</strong>(retry / <strong>exponential backoff</strong> / <strong>idempotency key</strong> / input validation / TTL 清理)、相依初始化錯誤的 <strong>init-time fail-fast</strong>、message broker 的 <strong>ack/nack 批次確認</strong>,結合 <strong>OpenTelemetry</strong> tracing 與 Kafka journey 事件,讓跨服務事故從小時級收斂至分鐘級。</li>
+                        <li>多渠道 <strong>messaging microservices</strong> 貢獻者(SMS entry / webhook delivery / campaign dispatch / IM broker):帶區域快取的 <strong>SMS segment 估算</strong> + 預付額度檢查、跨 <strong>多家 WhatsApp / SMS provider</strong> 的 webhook 正規化、contact sync 與自訂欄位查詢、<strong>Redis</strong> 連線池 lifecycle 管理。(上游 SMS gateway 由另一團隊負責。)</li>
                     </ul>
                 </div>
 
                 <div class="experience-item">
                     <div class="experience-header">
-                        <span class="job-title">Senior iOS Engineer <span class="company">@ CINNOX / M800</span></span>
+                        <span class="job-title">Senior Software Engineer — iOS <span class="company">@ M800 (Product: CINNOX)</span></span>
                         <span class="date">Sep 2019 - Mar 2024</span>
                     </div>
                     <ul class="experience-list">
-                        <li>iOS App 核心開發：開發 CINNOX iOS App 通話功能，整合 WebRTC、CallKit、VoIP Push。</li>
-                        <li>模組化 SDK 開發：負責 CINNOX iOS App 多個核心 SDK 的開發與維護，包含底層網路與認證模組、通話功能模組、UI 業務邏輯模組。</li>
-                        <li>Visitor SDK：開發面向外部客戶的 Visitor SDK，提供進階功能與完整技術文件。</li>
-                        <li>團隊協作：協助團隊成員解決技術問題，定期技術分享會議，促進團隊成長。</li>
+                        <li><strong>重構 VoIP 通話狀態機</strong>:在併發事件下讓 <strong>Offer / Answer / ICE</strong> 序列化、<strong>強制 ICE candidate gathering 完成後才發 SDP</strong>、修正 hold / unhold / renegotiation / trickle-ICE 的 race;依網路品質判斷的 <strong>SDP renegotiation</strong> 策略隨網路變化重新檢查 <strong>TURN / STUN</strong>。連線失敗 <strong>−40%</strong>、嚴重事故 <strong>−90%</strong>。</li>
+                        <li>強化 <strong>CallKit / PushKit / VoIP Push</strong> 整合:修正 push-to-call 取得 session、notification debounce、CallKit action / 早結束 timer 等問題,並為不支援 CallKit 的裝置加入優雅降級。建置 <strong>通話事件追蹤 + 結構化遠端日誌</strong>,讓 SRE / Ops 自助分類。</li>
+                        <li><strong>長期擔任內部 iOS 核心 SDK 的實作者</strong> —— 於 <strong>auth / session / presence / messaging 層</strong> 實作大量底層功能:不阻塞主執行緒的 login 與 <strong>service discovery(含區域 fallback)</strong>、跨區域連線;<strong>MQTT</strong> 自動重連與 ping / pong 邊界;<strong>WebSocket</strong> 傳輸;<strong>Notification Service Extension</strong> APNs 解析;<strong>Keychain</strong> session 狀態;記憶體洩漏修復與 TLS trust evaluation API 遷移。</li>
+                        <li><strong>Call SDK 功能覆蓋</strong>:on-net / off-net 通話、customer-to-agent 通話、conference call、<strong>3PCC</strong>(Third-Party Call Control)、轉接、錄音、agent routing、recent-transfer 歷程。維護 <strong>XCFramework / CocoaPods / dSYM / Archive / Fastlane</strong> 發版流程與 iOS 13 back-compat。</li>
+                        <li><strong>將內部 iOS 核心 SDK 產品化為可對外開放的商用 SDK</strong>:於長期維護的內部 stack 之上設計 public API 邊界、相依抽象與版本相容策略 —— 單一來源、不 fork。</li>
+                        <li><strong>VoIP 領域知識交接與 mentoring</strong> —— 把故障追查方式(通話事件追蹤、遠端日誌、<strong>memory graph 崩潰診斷</strong>、retain cycle 消除)整理為團隊可重複執行的流程。</li>
                     </ul>
                 </div>
 
@@ -278,8 +282,8 @@
                         <span class="date">Mar 2019 - Sep 2019</span>
                     </div>
                     <ul class="experience-list">
-                        <li>開發原生遊戲應用程式，使用 GCDAsyncSocket、ProtocolBuffers 等技術。</li>
-                        <li>透過實作 OpenSSL 及加密協定 (ECDSA/ECDH) 強化應用程式安全性。</li>
+                        <li>為即時多人遊戲建構 <strong>iOS 通訊層</strong>(GCDAsyncSocket + Protocol Buffers):設計訊息封包格式與重連邏輯,在不穩定行動網路下維持遊戲狀態一致。</li>
+                        <li>為遊戲內金流功能實作 <strong>端對端加密</strong>(OpenSSL ECDSA / ECDH),通過專案安全審計。</li>
                     </ul>
                 </div>
 
@@ -289,8 +293,9 @@
                         <span class="date">Mar 2018 - Feb 2019</span>
                     </div>
                     <ul class="experience-list">
-                        <li>維護並開發 Zenbo 機器人 iOS 應用程式，設計並實作 VoIP SDK。</li>
-                        <li>使用 Node.js 開發 ASUS 智慧音箱雲端技能（導航功能）。</li>
+                        <li>為 Zenbo 機器人開發 <strong>跨裝置 VoIP SDK</strong>:實作機器人與 iOS 裝置間的即時音/視訊通話,包含信令、NAT 穿透、通話狀態生命週期,以及機器人端硬體整合 — 包成 SDK 讓其他團隊能在不處理 WebRTC 細節的前提下嵌入視訊通話。</li>
+                        <li>為 ASUS 智慧音箱產品線開發 <strong>雲端語音技能後端</strong>(Node.js,部署於 Azure):負責設計 AI utterance,搭配另一團隊撰寫的語句解析器,完成雲端語音技能的業務邏輯、對話狀態管理與外部服務整合。</li>
+                        <li>同一個職位橫跨 <strong>iOS、機器人 runtime、Node.js 雲端</strong> 三層,把語音與通話功能串成單一跨裝置體驗。</li>
                     </ul>
                 </div>
 
@@ -300,9 +305,9 @@
                         <span class="date">Nov 2016 - Mar 2018</span>
                     </div>
                     <ul class="experience-list">
-                        <li>環境即時通 App：開發環保署空氣品質 App，百萬下載，榮獲資訊月百大創新產品獎、智慧城市創新應用獎。</li>
-                        <li>i-Plants：與農委會合作開發田間管理系統，獲中時電子報、農傳媒專題報導。</li>
-                        <li>畜牧場行動調查系統、農村資訊應用：開發多項政府合作專案。</li>
+                        <li>開發 <strong>環保署空氣品質 App</strong>(百萬下載、日活 2,000+):以 Charts 製作即時資料視覺化、透過 MQTT / REST 訂閱測站資料、以 CoreLocation 做地點通知,並用 CoreData 做離線快取。獲 <strong>2017–2018 資訊月百大創新產品獎</strong> 及 <strong>2018 智慧城市創新應用獎</strong>。</li>
+                        <li>與農委會合作開發 <strong>i-Plants 農食履歷系統</strong>:以 QR Code 串接 RESTful API 完成履歷追蹤流程,並針對田間場景提供離線儲存。獲全國媒體專題報導。</li>
+                        <li>交付 2 項 <strong>政府委託 iOS App</strong>(畜牧場調查、農村資訊):以 MapKit + CoreLocation 做地圖資料蒐集與 GPS 路徑規劃,配合 SQLite 離線儲存與伺服器同步,針對偏鄉低連線環境設計。</li>
                     </ul>
                 </div>
 
@@ -312,7 +317,7 @@
                         <span class="date">Dec 2015 - Nov 2016</span>
                     </div>
                     <ul class="experience-list">
-                        <li>網頁應用程式開發（義務役），人事及薪資系統開發與維護。</li>
+                        <li>服役期間開發人事薪資管理系統，自動化薪資計算與退休金試算流程。</li>
                     </ul>
                 </div>
 
@@ -322,7 +327,7 @@
                         <span class="date">Jun 2014 - Dec 2014</span>
                     </div>
                     <ul class="experience-list">
-                        <li>ERP 系統開發與維護，電子表單簽核系統開發。</li>
+                        <li>為企業 ERP 系統開發電子表單簽核流程，簡化多層級審批作業。</li>
                     </ul>
                 </div>
             </section>
@@ -330,45 +335,39 @@
             <section class="section">
                 <h2 class="section-title">Key Projects</h2>
                 <div class="project-item">
-                    <div class="project-title">CINNOX iOS Call Module (核心通話模組)</div>
-                    <p class="project-desc">開發 iOS App 核心通話功能，整合 WebRTC 音視訊、CallKit 原生通話體驗與會議通話。</p>
-                    <p class="project-tech">Tech: Swift, WebRTC, CallKit, VoIP Push</p>
+                    <div class="project-title">分散式 Stateful Workflow 核心</div>
+                    <p class="project-desc">串接 6+ 個服務的長時運行客戶互動流程 — 一次流量尖峰下的 handoff 漏掉就變成跨服務、沒人能重現的數小時不一致事故。<strong>決策:</strong> 選用 TTL-based 分散式 lock 而非外部 lock 服務(降低維運表面);路由引擎做成策略可切換(依流程類型切負載平衡 / 親和性 / 故障轉移),而非寫死單一策略。<strong>結果:</strong> 跨服務事故處理從救火轉為流程驅動,流程事件下沉至 Kafka,SRE / analytics 可自助追蹤完整生命週期。</p>
+                    <p class="project-tech">Tech: Go, Kafka, NATS, MongoDB, gRPC, Jaeger</p>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">模組化 SDK 架構開發</div>
-                    <p class="project-desc">負責 CINNOX iOS App 多個核心 SDK 的開發與維護：Core SDK (底層網路與認證)、Call SDK (VoIP 通話功能)、UIKit (UI 業務邏輯)。</p>
-                    <p class="project-tech">Tech: Swift, CocoaPods, Realm, MQTT</p>
+                    <div class="project-title">環保署空氣品質 iOS App — 百萬下載、政府雙獎</div>
+                    <p class="project-desc">消費端環境資料 App,使用者大多在通勤捷運或低訊號鄉村開啟 — 「需要網路才能用」就等於必被解除安裝。<strong>決策:</strong> 選擇 CoreData offline-first 而非 request/response;MQTT 訂閱取代 REST polling(cellular / 電力);CoreLocation significant-location-change 取代持續 GPS(背景限制 / 電力存活)。<strong>結果:</strong> 百萬下載、2,000+ DAU,獲 <strong>2017–2018 資訊月百大創新產品獎</strong> 與 <strong>2018 智慧城市創新應用獎</strong>。</p>
+                    <p class="project-tech">Tech: Swift, CoreData, MQTT, CoreLocation, Charts</p>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">ACD Queue System (自動話務分配系統)</div>
-                    <p class="project-desc">設計並實作企業級 ACD 系統，支援 Round-robin、Most Idle、Simultaneous 等分配策略。</p>
-                    <p class="project-tech">Tech: Go, MongoDB, Redis, gRPC</p>
+                    <div class="project-title">i-Plants 農食履歷 + 政府委託 iOS App 系列</div>
+                    <p class="project-desc">與農委會合作,使用者是農場田間人員 — 訊號不穩、雙手沾泥、單手操作。<strong>決策:</strong> 選擇 offline-first 為預設、網路為選配,而非常見的 online-first 設計 — QR 掃描與表單填寫直接寫入本地 SQLite,連線恢復時才差異同步;UI 以大型單點按鈕為主而非典型 tab-bar。原則:「網路是選配,不是預設」。<strong>結果:</strong> 順利交付給多個政府單位,獲 <strong>中時電子報、農傳媒專題報導</strong>;同套架構在後續 2 項委託專案中複用不需改寫。</p>
+                    <p class="project-tech">Tech: Swift, SQLite, RESTful API, MapKit, CoreLocation, QR Code</p>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">環境即時通 多次獲獎</div>
-                    <p class="project-desc">行政院環保署開放資料 App，App Store 累積百萬下載，2017-2018 資訊月百大創新產品獎、2018 智慧城市創新應用獎。</p>
-                    <p class="project-tech">Tech: Swift, CoreLocation, APNS, MapKit</p>
+                    <div class="project-title">Zenbo 跨裝置 VoIP SDK(ASUS 智慧機器人)</div>
+                    <p class="project-desc">ASUS Zenbo 機器人需要與 iOS 即時通話,但機器人 runtime <strong>不是標準 iOS</strong> — 信令、NAT 穿透、通話生命週期皆需自行設計,其他團隊不應該被迫學 WebRTC 才能用通話。<strong>決策:</strong> 將協商、NAT 穿透、狀態機 <strong>包成單一進入點 SDK</strong>,而非暴露 raw WebRTC;iOS 與機器人 runtime <strong>共用同一份 call-state model</strong>,在問題發生前消滅整類跨裝置 race(沒有第二個狀態機可漂移)。<strong>結果:</strong> 其他團隊以少量 API 即可嵌入 Zenbo↔iOS 通話;SDK 成為 ASUS 智慧機器人通話能力底層。</p>
+                    <p class="project-tech">Tech: Swift, WebRTC, VoIP, APNS, NAT Traversal</p>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">i-Plants 農作物田間管理系統</div>
-                    <p class="project-desc">與農委會合作開發，協助農民記錄農食流程生成產銷履歷，獲中時電子報、農傳媒專題報導。</p>
-                    <p class="project-tech">Tech: Swift, CoreData, GPS, Offline</p>
+                    <div class="project-title">即時多人遊戲通訊層 + 端對端加密</div>
+                    <p class="project-desc">即時多人遊戲,遊戲狀態必須在不穩定行動網路下維持一致;內含真實金流,通過嚴格上架前安全審計為必要條件。<strong>決策:</strong> 通訊層 <strong>基於 GCDAsyncSocket + Protocol Buffers 自行設計封包與重連協定</strong>,而非套用通用 socket library — 遊戲 frame 順序與部分狀態 replay 需要的封包語意沒有通用 library 會正確建模。金流 <strong>在 TLS 之上加 ECDSA / ECDH 端對端加密</strong>,讓金流訊息即使被攔截也無法解開。原則:「會讓遊戲死掉的地方不要外包」。<strong>結果:</strong> 遊戲狀態於不穩定行動網路下保持一致;金流一次通過上架前安全審計。</p>
+                    <p class="project-tech">Tech: Objective-C, Swift, GCDAsyncSocket, Protocol Buffers, OpenSSL (ECDSA/ECDH)</p>
                 </div>
 
                 <div class="project-item">
-                    <div class="project-title">iShopper 電子發票優惠通 (Freelance)</div>
-                    <p class="project-desc">電子發票兌獎平台 App，提供發票 QRCode 掃描、載具條碼生成、財政部 API 串接與自動對獎。</p>
-                    <p class="project-tech">Tech: Swift, AVFoundation, REST API</p>
-                </div>
-
-                <div class="project-item">
-                    <div class="project-title">Acer Halo 智慧音箱 (Freelance)</div>
-                    <p class="project-desc">Acer 智慧音箱 iOS 操控應用，提供裝置配對綁定、WiFi 配置與語音助理控制功能。</p>
-                    <p class="project-tech">Tech: Swift, Bluetooth, mDNS, IoT</p>
+                    <div class="project-title">AI 協作工程實踐</div>
+                    <p class="project-desc">把資深判斷(跨服務影響分析、code review 啟發式)設計成可重複、可審計的團隊 Skill、MCP 工具與 Agent,把「誰最熟悉這套系統」從個人經驗變成可執行流程,並縮短新進同事的 ramp-up 時間。</p>
+                    <p class="project-tech">Tech: Claude, Claude Code, MCP, Custom Skills &amp; Agents</p>
                 </div>
             </section>
         </div>
@@ -377,42 +376,54 @@
             <section class="section">
                 <h2 class="section-title">Technical Skills</h2>
                 <div class="skill-category">
-                    <h4>Programming Languages</h4>
+                    <h4>Go Backend &amp; Distributed Systems</h4>
                     <div class="skill-tags">
-                        <span class="skill-tag">Swift</span>
-                        <span class="skill-tag">Go (Golang)</span>
-                        <span class="skill-tag">Python</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" style="margin-top: 12px;">
-                    <h4>iOS Development</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">WebRTC</span>
-                        <span class="skill-tag">CallKit</span>
-                        <span class="skill-tag">UIKit</span>
-                        <span class="skill-tag">Realm</span>
-                        <span class="skill-tag">APNS</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" style="margin-top: 12px;">
-                    <h4>Backend &amp; Cloud</h4>
-                    <div class="skill-tags">
-                        <span class="skill-tag">MongoDB</span>
-                        <span class="skill-tag">Redis</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Kubernetes</span>
-                    </div>
-                </div>
-
-                <div class="skill-category" style="margin-top: 12px;">
-                    <h4>Architecture</h4>
-                    <div class="skill-tags">
+                        <span class="skill-tag">Go · Gin · gRPC</span>
                         <span class="skill-tag">Microservices</span>
-                        <span class="skill-tag">gRPC</span>
-                        <span class="skill-tag">REST API</span>
-                        <span class="skill-tag">MQTT</span>
+                        <span class="skill-tag">Stateful Workflow Orchestration</span>
+                        <span class="skill-tag">Retry/Backoff · Idempotency</span>
+                        <span class="skill-tag">TTL Distributed Locks</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Data, Messaging &amp; Observability</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">MongoDB (ESR)</span>
+                        <span class="skill-tag">Kafka · NATS · Redis · SQS</span>
+                        <span class="skill-tag">pprof · Jaeger</span>
+                        <span class="skill-tag">ELK · Prometheus · Grafana</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>Cloud, Container &amp; Platform</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Kubernetes · Docker</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Platform Control Plane</span>
+                        <span class="skill-tag">Configuration Automation</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>iOS &amp; Real-time Calling</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Swift · Objective-C · Combine</span>
+                        <span class="skill-tag">WebRTC · CallKit · VoIP Push</span>
+                        <span class="skill-tag">UIKit · SQLite · Realm</span>
+                        <span class="skill-tag">XCFramework · CocoaPods</span>
+                        <span class="skill-tag">Public API Design / SDK Productization</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" style="margin-top: 12px;">
+                    <h4>AI-Augmented Engineering</h4>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Claude · Claude Code</span>
+                        <span class="skill-tag">MCP · Custom Skills &amp; Agents</span>
+                        <span class="skill-tag">Cross-service Impact Analysis</span>
+                        <span class="skill-tag">Code-review &amp; Change-risk Templates</span>
                     </div>
                 </div>
             </section>
@@ -420,10 +431,12 @@
             <section class="section">
                 <h2 class="section-title">Highlights</h2>
                 <ul class="experience-list" style="padding-left: 16px;">
-                    <li>解決超過 500+ 個技術 Issues</li>
-                    <li>10+ 年軟體開發經驗</li>
-                    <li>維護 4+ 個 iOS SDK 模組</li>
-                    <li>深度整合 WebRTC/CallKit</li>
+                    <li>6+ 年深耕同一個 production 系統 —— <strong>跨 16 個 Go + iOS repository 累積 3,000+ commits</strong></li>
+                    <li>後端 ownership:分散式 session 狀態機、platform control plane,以及橫跨微服務的跨服務可靠性治理(Go · MongoDB · Kafka · NATS · Redis)</li>
+                    <li>長期把難以重現的跨服務事故收攏為 runbook、儀表板與平台能力,讓團隊能放心依賴</li>
+                    <li>長期擔任內部 iOS 核心 SDK 實作者(VoIP 信令、auth / session / presence / messaging)—— 產品化為對外商用 SDK,成為下游產品線的底層</li>
+                    <li>兩條長期主線(Go 後端 + iOS SDK)在同一個產品上交織運作,而不是各做各的</li>
+                    <li>AI 協作工程是日常:把資深判斷(跨服務影響分析、變更風險審查)寫成可重用的團隊 Skill、MCP 工具與 Agent</li>
                 </ul>
             </section>
 
@@ -431,7 +444,7 @@
                 <h2 class="section-title">Languages</h2>
                 <ul class="experience-list" style="padding-left: 16px;">
                     <li>中文（母語）</li>
-                    <li>英文（工作溝通）</li>
+                    <li>英文（工作溝通流利）</li>
                 </ul>
             </section>
 

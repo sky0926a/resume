@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jimmy Li - Senior Software Engineer specializing in iOS and Backend Development | Swift, Go, Python, MongoDB, AWS">
-    <meta name="keywords" content="Software Engineer, iOS Developer, Backend Engineer, Go, Swift, Python, MongoDB, AWS, Microservices">
-    <title>Jimmy Li | Senior Software Engineer</title>
+    <meta name="description" content="Jimmy Li - Senior Software Engineer specializing in Go distributed backend, iOS SDK productization, and AI-augmented engineering workflows | Distributed Workflow Orchestration, Platform Control Plane, WebRTC, Combine">
+    <meta name="keywords" content="Senior Software Engineer, Go, Golang, Distributed Systems, Workflow Orchestration, Platform Engineering, Microservices, MongoDB, Kafka, Kubernetes, iOS, Swift, Combine, WebRTC, CallKit, SDK Productization, AI-Augmented Engineering">
+    <title>Jimmy Li | Senior Software Engineer · Go Backend &amp; iOS SDK</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
@@ -30,9 +30,11 @@
             <ul class="nav-menu">
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#mentorship" class="nav-link">Mentorship</a></li>
+                <li><a href="#ai-engineering" class="nav-link">AI Engineering</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="resume-print-en.html" class="nav-link nav-print" target="_blank">
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" style="vertical-align: middle; margin-right: 4px;">
@@ -64,7 +66,7 @@
                     <span class="cursor">|</span>
                 </h2>
                 <p class="hero-description">
-                    Focused on iOS Apps and Backend Systems Development<br>Expert in Real-time Communication, WebRTC, and Microservices Architecture
+                    Go backend on a contact center SaaS — distributed session state machine, platform control plane, and cross-service reliability work across the microservice estate<br>Long-term author of the company&#39;s internal iOS core SDK (VoIP signaling, auth / session / presence / messaging), later productized into the externally-consumable commercial SDK<br>AI-augmented engineering as daily practice — building Skills, MCP tools and Agents that turn senior judgment into reusable team capability
                 </p>
                 <div class="hero-cta">
                     <a href="#experience" class="btn btn-primary">
@@ -88,16 +90,16 @@
 
 func main() {
     engineer := Engineer{
-        Name:       &quot;Jimmy Li&quot;,
-        Role:       &quot;Full-Stack&quot;,
-        Experience: 10+ years,
-        Skills:     []string{
-            &quot;Swift&quot;, &quot;Go&quot;,
-            &quot;iOS SDK&quot;, &quot;WebRTC&quot;,
-            &quot;MongoDB&quot;,
+        Name:  &quot;Jimmy Li&quot;,
+        Focus: []string{
+            &quot;Workflow Orchestration&quot;,
+            &quot;Platform Control Plane&quot;,
+            &quot;iOS SDK Productization&quot;,
         },
+        Stack: []string{&quot;Go&quot;, &quot;Swift&quot;, &quot;Mongo&quot;, &quot;Kafka&quot;},
+        Edge:  &quot;AI-augmented engineering&quot;,
     }
-    engineer.BuildAwesomeThings()
+    engineer.ShipReliableSystems()
 }</code></pre>
                 </div>
             </div>
@@ -116,32 +118,33 @@ func main() {
             </h2>
             <div class="about-content">
                 <div class="about-text">
-                    <p>I am a Senior Software Engineer with over 10 years of experience, specializing in iOS Apps and Backend Services development. Currently working at CINNOX / M800, responsible for developing enterprise-grade real-time communication platform iOS App and backend systems.</p>
-                    <p>My expertise lies in developing iOS applications with Swift, building backend microservices with Go, and creating automation tools and data migration scripts with Python. I have extensive experience in WebRTC, CallKit, and real-time communication protocol integration.</p>
-                    <p>In my previous roles, I successfully delivered multiple key projects:</p>
+                    <p>Senior software engineer, <strong>10+ years total, 6+ on a single enterprise contact center SaaS</strong> at M800/CINNOX. Currently on Go backend — owner of the distributed session state machine, the platform control plane, and a long-running track of MongoDB performance and cross-service reliability work across the platform&#39;s microservice estate.</p>
+                    <p>Long-term author of the company&#39;s internal iOS core SDK (VoIP signaling, auth / session / presence / messaging), later productized into the externally-consumable commercial SDK that became the foundation of a downstream product line.</p>
+                    <p>Recent focus: <strong>AI-augmented engineering</strong> — building Skills, MCP tools and Agents that turn senior judgment (cross-service impact analysis, code review heuristics) into reusable team capability rather than tribal knowledge.</p>
                     <ul class="about-highlights">
-                        <li>Developed CINNOX iOS App core calling features</li>
-                        <li>Integrated WebRTC and CallKit for VoIP calls</li>
-                        <li>Designed and implemented Automatic Call Distribution (ACD) system</li>
-                        <li>Developed WhatsApp Business API integration</li>
+                        <li><strong>Systems thinking on already-complex platforms</strong> — comfortable entering a multi-service product in flight and redesigning the parts that hurt without pausing delivery.</li>
+                        <li><strong>Incident-driven → process-driven</strong> — I turn unreproducible cross-service failures into repeatable playbooks, observability and architecture that outlasts the fix.</li>
+                        <li><strong>Platform-first instinct</strong> — whenever a manual operation shows up twice, I push it down into automated platform capability with consistency guardrails.</li>
+                        <li><strong>Full-stack iOS SDK story</strong> — from long-term core-module ownership to designing an externally-consumable commercial SDK on top (API surface, versioning, automated releases).</li>
+                        <li><strong>AI-augmented engineering in production</strong> — senior judgement (cross-service impact analysis, review heuristics, runbook distillation) engineered into reusable team Skills.</li>
                     </ul>
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <span class="stat-number">500+</span>
-                        <span class="stat-label">Issues Resolved</span>
+                        <span class="stat-number">10+ yrs</span>
+                        <span class="stat-label">Senior Engineering Career</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Years Experience</span>
+                        <span class="stat-number">6+ yrs</span>
+                        <span class="stat-label">On one Contact Center SaaS</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Microservices</span>
+                        <span class="stat-number">3,000+</span>
+                        <span class="stat-label">Commits across 16 Repos</span>
                     </div>
                     <div class="stat-card">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Apps Published</span>
+                        <span class="stat-number">Go + iOS</span>
+                        <span class="stat-label">Two long-running tracks</span>
                     </div>
                 </div>
             </div>
@@ -159,26 +162,31 @@ func main() {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="timeline-title">Senior Backend Engineer</h3>
-                            <span class="timeline-company">CINNOX / M800</span>
+                            <h3 class="timeline-title">Senior Software Engineer — Go Backend</h3>
+                            <span class="timeline-company">M800 (Product: CINNOX)</span>
                         </div>
                         <span class="timeline-date">Mar 2024 - Present</span>
                         <ul class="timeline-description">
-                            <li>Real-time Communication Platform Development: Developed core microservices for customer service platform, handling complete ticket lifecycle from creation, assignment, transfer to closure.</li>
-                            <li>Intelligent Call Distribution System: Designed automatic call distribution mechanism implementing Round-robin, Most Idle, Simultaneous strategies, syncing distribution records to analytics platform.</li>
-                            <li>Bulk SMS System Optimization: Refactored SMS sending workflow, optimized API response time, reduced database operations, and lowered memory usage.</li>
-                            <li>Chat Room List Optimization: Extended chat room classification types, optimized list query performance and pagination mechanism.</li>
-                            <li>Webhook API Development: Developed Webhook APIs for external service integration, supporting customer data synchronization and event notifications.</li>
-                            <li>Database Performance Optimization: Analyzed slow query logs, created compound indexes, configured TTL auto-expiration to improve query efficiency.</li>
+                            <li>Owned a <strong>distributed session state machine</strong> (create / pickup / transfer / terminate) in the workflow orchestration service — <strong>session affinity</strong>, <strong>timeout + lock TTL</strong>, no-target fallback, plus a <strong>priority work dispatch queue</strong> with per-stage timeout handling. Journey and history events published via <strong>Kafka</strong> to analytics, giving SRE and product end-to-end traceability over every session.</li>
+                            <li>Built the <strong>platform control plane</strong> backend on <strong>Go + Gin + MongoDB</strong>: service / member / routing-rule / destination configuration with third-party identity integration. Routing rules and <strong>fan-out notification policy</strong> are generated automatically from platform configuration; a heavy permission sync was lifted from <strong>synchronous cron to asynchronous event-driven</strong>; scheduled notifications integrated via a <strong>NATS</strong> task callback — turning a manual engineer-in-the-loop setup into an automated platform capability.</li>
+                            <li>Led incident response and architectural rewrite for a batch messaging pipeline <strong>OOM</strong> at 100K-message scale: three-stage redesign (<strong>batched enqueue + Token Bucket rate limiting + bounded worker pool</strong>) tuned against real production traffic. Peak memory <strong>3GB → 600MB</strong>, <strong>10× throughput</strong> (50K → 500K).</li>
+                            <li>Continuous <strong>MongoDB performance governance</strong>: query-shape-driven <strong>ESR compound index design</strong>, snapshot indexes, slow-query elimination via query refactor, <strong>write concern majority</strong> and <strong>read preference</strong> tuning for safety. Critical query p95 <strong>seconds → &lt;100ms</strong>, held as routine operations instead of one-shot heroics.</li>
+                            <li>Hardened cross-service reliability with a shared <strong>resilience toolkit</strong> (retry, <strong>exponential backoff</strong>, <strong>idempotency keys</strong>, input validation, TTL cleanup), <strong>init-time fail-fast</strong> on dependency errors, and <strong>ack/nack batch confirmation</strong> on the message broker. Integrated <strong>OpenTelemetry</strong> tracing and Kafka journey events so multi-service incidents localize in minutes, not hours.</li>
+                            <li>Contributor to the <strong>multi-channel messaging microservices</strong> (SMS entry, webhook delivery, campaign dispatch, IM broker): region-cached <strong>SMS segment estimation</strong> + prepaid-balance check, webhook-provider normalization across <strong>multiple WhatsApp / SMS provider integrations</strong>, contact sync with custom-field search, and <strong>Redis</strong> connection-pool lifecycle management. (Upstream SMS gateway connectivity owned by a separate team.)</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Go</span>
                             <span class="tech-tag">Gin</span>
-                            <span class="tech-tag">MongoDB</span>
-                            <span class="tech-tag">Kafka</span>
-                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">gRPC</span>
+                            <span class="tech-tag">MongoDB (ESR)</span>
+                            <span class="tech-tag">Kafka (confluent-kafka-go v2)</span>
                             <span class="tech-tag">NATS</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">OpenTelemetry</span>
                             <span class="tech-tag">Kubernetes</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">pprof</span>
+                            <span class="tech-tag">Token Bucket</span>
                         </div>
                     </div>
                 </div>
@@ -187,28 +195,31 @@ func main() {
                     <div class="timeline-marker"></div>
                     <div class="timeline-content">
                         <div class="timeline-header">
-                            <h3 class="timeline-title">Senior iOS Engineer</h3>
-                            <span class="timeline-company">CINNOX / M800</span>
+                            <h3 class="timeline-title">Senior Software Engineer — iOS</h3>
+                            <span class="timeline-company">M800 (Product: CINNOX)</span>
                         </div>
                         <span class="timeline-date">Sep 2019 - Mar 2024</span>
                         <ul class="timeline-description">
-                            <li>iOS App Core Development: Developed CINNOX iOS App calling features including WebRTC integration, CallKit implementation, and audio/video call core modules.</li>
-                            <li>Modular SDK Development: Responsible for developing and maintaining multiple core SDKs for CINNOX iOS App, including network and authentication module, calling module, and UI business logic module.</li>
-                            <li>Call Feature Optimization: Resolved WebRTC connection issues, network switching, and conference call rejoin scenarios.</li>
-                            <li>UI/UX Development: Implemented image/video picker, unread message panel, navigation bar optimization.</li>
-                            <li>Third-party Integration: Integrated Salesforce SDK, APNS/VoIP Push, Realm database.</li>
-                            <li>Visitor SDK Development: Developed customer-facing Visitor SDK with advanced features and comprehensive documentation.</li>
-                            <li>Team Collaboration and Tech Sharing: Assisted team members in resolving technical issues and organized regular tech sharing sessions to promote team growth.</li>
+                            <li><strong>Refactored the VoIP call state machine</strong>: serialized <strong>Offer / Answer / ICE</strong> transitions under concurrent call events, <strong>enforced ICE candidate gathering completion before SDP dispatch</strong>, and fixed race conditions in hold / unhold / renegotiation / trickle-ICE. Network-quality-aware <strong>SDP renegotiation</strong> strategy per network change with <strong>TURN / STUN</strong> re-check. Connection failure rate <strong>−40%</strong>, critical incidents <strong>−90%</strong> (weekly 2–3 → monthly &lt;2).</li>
+                            <li>Hardened <strong>CallKit / PushKit / VoIP Push</strong> integration — fixed push-to-call session acquisition, call notification debounce, CallKit action and early-end timer issues, and added graceful degradation for devices without CallKit. Built <strong>call event tracing + structured remote logging</strong> (stage, error code, state-transition telemetry) so SRE and Operations can self-classify call issues without engineering intervention.</li>
+                            <li><strong>Long-term author of the internal iOS core SDK</strong> — implemented substantial portions of the <strong>auth, session, presence and messaging layers</strong>: non-blocking login pipeline with <strong>service discovery (regional fallback)</strong> and cross-region connectivity; <strong>MQTT</strong> auto-reconnect with ping / pong edge handling and event pull after reconnect; <strong>WebSocket</strong> transport; <strong>Notification Service Extension</strong> APNs payload parsing; <strong>Keychain</strong> / UserDefaults session state; memory-leak fixes and TLS trust-evaluation API migration.</li>
+                            <li><strong>Authored Call SDK feature breadth</strong>: on-net / off-net calling, customer-to-agent calling, conference call, <strong>3PCC</strong> (Third-Party Call Control), call transfer, recording, agent routing and recent-transfer history. Unified network-quality judgement across the SDK, fixed reachability edge cases, and maintained the <strong>XCFramework / CocoaPods / dSYM / Archive / Fastlane</strong> release pipeline with back-compat down to iOS 13.</li>
+                            <li><strong>Productized the internal iOS core SDK into an externally-consumable commercial SDK</strong> on top of the long-maintained internal stack: defined public API surface, dependency abstractions, version-compatibility strategy; single source of truth (no fork). The SDK became the foundation of a downstream customer-facing product line.</li>
+                            <li><strong>VoIP knowledge handover and mentoring</strong> — shifted call-related tickets from &#39;only a few people can handle&#39; to &#39;multiple can take over&#39;; codified troubleshooting (call event tracing, remote logging, <strong>memory-graph crash diagnosis</strong>, retain-cycle elimination) into a repeatable team process.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Swift</span>
                             <span class="tech-tag">Objective-C</span>
                             <span class="tech-tag">WebRTC</span>
                             <span class="tech-tag">CallKit</span>
-                            <span class="tech-tag">UIKit</span>
-                            <span class="tech-tag">Realm</span>
-                            <span class="tech-tag">APNS</span>
-                            <span class="tech-tag">CocoaPods</span>
+                            <span class="tech-tag">PushKit / VoIP Push</span>
+                            <span class="tech-tag">APNS (Notification Service Extension)</span>
+                            <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">WebSocket</span>
+                            <span class="tech-tag">3PCC</span>
+                            <span class="tech-tag">Keychain</span>
+                            <span class="tech-tag">XCFramework</span>
+                            <span class="tech-tag">CocoaPods / Fastlane</span>
                         </div>
                     </div>
                 </div>
@@ -222,9 +233,8 @@ func main() {
                         </div>
                         <span class="timeline-date">Mar 2019 - Sep 2019</span>
                         <ul class="timeline-description">
-                            <li>Developed native gaming applications, enhanced iOS frameworks to improve performance and user experience.</li>
-                            <li>Integrated advanced features using GCDAsyncSocket, ProtocolBuffers, JSPatch, CAAnimation.</li>
-                            <li>Enhanced application security by implementing OpenSSL and encryption protocols (ECDSA/ECDH).</li>
+                            <li>Built the <strong>iOS networking layer</strong> for a real-time multiplayer game on top of GCDAsyncSocket + Protocol Buffers, designing message framing and reconnection logic to keep gameplay state consistent under lossy mobile networks.</li>
+                            <li>Implemented <strong>end-to-end encryption</strong> with OpenSSL (ECDSA / ECDH key exchange) for in-game financial flows, passing the project&#39;s security audit.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Objective-C</span>
@@ -245,14 +255,15 @@ func main() {
                         </div>
                         <span class="timeline-date">Mar 2018 - Feb 2019</span>
                         <ul class="timeline-description">
-                            <li>Maintained and developed iOS applications for Zenbo Robot.</li>
-                            <li>Designed and implemented VoIP SDK supporting cross-device real-time communication.</li>
-                            <li>Developed cloud skill for ASUS smart speaker using Node.js, focusing on navigation features for route and location information.</li>
+                            <li>Built a <strong>cross-device VoIP SDK for the Zenbo Robot</strong>: real-time audio/video calling between the robot and iOS devices, including signaling, NAT traversal, call-state lifecycle, and robot-side hardware integration — packaged as an SDK so other teams could embed video calling without dealing with WebRTC details.</li>
+                            <li>Developed the <strong>cloud voice skill backend</strong> for an ASUS smart speaker product line on Node.js (deployed on Azure): designed AI utterances, integrated with another team&#39;s utterance parser, and implemented the voice skill&#39;s cloud-side business logic, dialog state and external service integration.</li>
+                            <li>Worked across <strong>iOS, robot runtime and Node.js cloud</strong> in the same role — bridged the three layers so calling and voice features could ship as a single cross-device experience.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Swift</span>
                             <span class="tech-tag">Node.js</span>
                             <span class="tech-tag">VoIP</span>
+                            <span class="tech-tag">WebRTC</span>
                             <span class="tech-tag">APNS</span>
                             <span class="tech-tag">Azure</span>
                         </div>
@@ -268,10 +279,9 @@ func main() {
                         </div>
                         <span class="timeline-date">Nov 2016 - Mar 2018</span>
                         <ul class="timeline-description">
-                            <li>Environmental Push App: Developed EPA air quality App with 1M+ App Store downloads, won 2017-2018 Information Month Top 100 Innovation Award and 2018 Smart City Innovation Award.</li>
-                            <li>i-Plants Crop Management System: Collaborated with Council of Agriculture to develop field management system, featured in media coverage.</li>
-                            <li>Livestock Farm Survey System: Developed livestock registration query and reporting features with Google route planning integration.</li>
-                            <li>Rural Information Application: Led UI design and development within one month, gained management approval.</li>
+                            <li>Developed the <strong>EPA Air Quality iOS App</strong> (1M+ downloads, 2,000+ DAU): real-time air quality data visualization with Charts, station-data subscription via MQTT/REST, location-based alerts using CoreLocation, and offline CoreData caching for low-connectivity scenarios. Recognized by the <strong>Information Month Top 100 Innovation Award (2017–2018)</strong> and the <strong>Smart City Innovation Award (2018)</strong>.</li>
+                            <li>Built the <strong>i-Plants crop traceability system</strong> with the Council of Agriculture: QR-code-based traceability flow backed by RESTful APIs, with offline-friendly local storage for field use. Featured in ChinaTimes and Agricultural Media.</li>
+                            <li>Delivered 2 additional <strong>government-commissioned iOS apps</strong> (livestock field survey, rural information portal): map-based data collection on MapKit + CoreLocation with GPS routing, offline SQLite storage and server sync, designed for low-connectivity rural environments.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Swift</span>
@@ -279,6 +289,8 @@ func main() {
                             <span class="tech-tag">MapKit</span>
                             <span class="tech-tag">Charts</span>
                             <span class="tech-tag">MQTT</span>
+                            <span class="tech-tag">CoreData</span>
+                            <span class="tech-tag">SQLite</span>
                         </div>
                     </div>
                 </div>
@@ -292,9 +304,7 @@ func main() {
                         </div>
                         <span class="timeline-date">Dec 2015 - Nov 2016</span>
                         <ul class="timeline-description">
-                            <li>Web application development (Military Service).</li>
-                            <li>Personnel and payroll system development and maintenance.</li>
-                            <li>Pension calculation system development.</li>
+                            <li>Built personnel and payroll system during military service, automating salary calculation and pension estimation.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">Web Development</span>
@@ -313,8 +323,7 @@ func main() {
                         </div>
                         <span class="timeline-date">Jun 2014 - Dec 2014</span>
                         <ul class="timeline-description">
-                            <li>ERP system development and maintenance.</li>
-                            <li>Electronic form approval system development.</li>
+                            <li>Developed electronic form approval workflow for enterprise ERP system.</li>
                         </ul>
                         <div class="timeline-tech">
                             <span class="tech-tag">ERP</span>
@@ -327,10 +336,346 @@ func main() {
         </div>
     </section>
 
-    <section id="education" class="section education">
+    <section id="projects" class="section projects">
         <div class="container">
             <h2 class="section-title">
                 <span class="title-number">03.</span>
+                Selected Projects
+            </h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="3" width="6" height="6" rx="1" /><rect x="15" y="3" width="6" height="6" rx="1" /><rect x="9" y="15" width="6" height="6" rx="1" /><path d="M6 9v3a2 2 0 0 0 2 2h2" /><path d="M18 9v3a2 2 0 0 1-2 2h-2" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">Backend · Distributed</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Distributed Stateful Workflow Orchestrator</h3>
+                    <p class="project-description">
+                        Coordinating long-running customer-interaction flows across 6+ services — the kind of system where a single dropped handoff under load turns into hours of cross-service inconsistency no single team can reproduce. <strong>Decision:</strong> TTL-based distributed locks over an external lock service to keep the operational surface small; a strategy-switchable routing engine (load-balancing / affinity / failover per flow type) rather than a hardcoded policy, so new flow types never touch core code. <strong>Result:</strong> cross-service recovery moved from incident-driven firefighting to process-driven operations, with flow events sunk into Kafka so SRE and analytics can self-serve full-lifecycle tracing.
+                    </p>
+                    <ul class="project-features">
+                        <li>TTL-based locks over an external lock service — minimized operational surface</li>
+                        <li>Strategy-switchable routing (not hardcoded) — new flow types don&#39;t touch core</li>
+                        <li>Flow events → Kafka — SRE / analytics self-serve tracing</li>
+                        <li>Recovery ran as process, not firefighting</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Go</span>
+                        <span>Kafka</span>
+                        <span>NATS</span>
+                        <span>MongoDB</span>
+                        <span>gRPC</span>
+                        <span>Jaeger</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS · Award-winning</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">EPA Air Quality iOS App — 1M+ downloads, 2 government innovation awards</h3>
+                    <p class="project-description">
+                        A consumer environmental-data app whose users mostly opened it on commuter MRT or in low-signal rural areas — meaning &#39;requires network to be useful&#39; was a guaranteed uninstall. <strong>Decision:</strong> chose a CoreData-backed offline-first design over a request/response model so every screen still rendered against the last known snapshot when connectivity dropped; subscribed to live station data via <strong>MQTT instead of REST polling</strong> to cut cellular and battery cost; used CoreLocation <strong>significant-location-change</strong> rather than continuous GPS for proximity alerts so the app didn&#39;t get killed by iOS background limits or drained the battery enough to be deleted. <strong>Result:</strong> 1M+ downloads, 2,000+ DAU, awarded the <strong>Information Month Top 100 Innovation Award (2017–2018)</strong> and the <strong>Smart City Innovation Award (2018)</strong>.
+                    </p>
+                    <ul class="project-features">
+                        <li>Offline-first via CoreData snapshot — works in MRT / rural blackspots</li>
+                        <li>MQTT subscription over REST polling — cellular and battery friendly</li>
+                        <li>Significant-location-change over continuous GPS — survives background limits</li>
+                        <li>1M+ downloads, 2,000+ DAU, 2 government innovation awards</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>CoreData</span>
+                        <span>MQTT</span>
+                        <span>CoreLocation</span>
+                        <span>Charts</span>
+                        <span>RESTful API</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS · Government Collaboration</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">i-Plants Crop Traceability + Government-commissioned iOS App Series</h3>
+                    <p class="project-description">
+                        Built with the Council of Agriculture for field workers in agricultural environments — the actual usage context is unstable cellular signal, muddy gloves, and one-handed operation while moving between sites. The same offline-first architecture later carried 2 additional government-commissioned iOS apps (livestock field survey, rural information portal). <strong>Decision:</strong> chose <strong>offline-first as the default, network as the option</strong> rather than the more common online-first design — every QR-code scan and form submission wrote straight to local SQLite, with diff-sync triggered only when connectivity returned; UI built around large single-tap targets instead of the typical city-app tab-bar layout, because the actual hands holding the phone were rarely steady. The principle was &#39;treat the network as optional, not as the default.&#39; <strong>Result:</strong> delivered to the Council of Agriculture and multiple government units, <strong>featured in ChinaTimes and Agricultural Media</strong>; the same offline-first architecture was reused across the next 2 commissioned projects without rewrites.
+                    </p>
+                    <ul class="project-features">
+                        <li>Offline-first by default, network as option — built for unstable field signal</li>
+                        <li>Local SQLite write-through + diff-sync on reconnect</li>
+                        <li>Single-tap UI for muddy / one-handed operation</li>
+                        <li>Featured in ChinaTimes and Agricultural Media; reused across 3 projects</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>SQLite</span>
+                        <span>RESTful API</span>
+                        <span>MapKit</span>
+                        <span>CoreLocation</span>
+                        <span>QR Code</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS · Cross-device SDK</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Zenbo Cross-device VoIP SDK (ASUS Smart Robot)</h3>
+                    <p class="project-description">
+                        ASUS Zenbo robots needed real-time audio/video calls with iOS devices, but the robot runtime is <strong>not standard iOS</strong> — signaling, NAT traversal, and call lifecycle all had to be designed from scratch, and other product teams shouldn&#39;t be forced to learn WebRTC just to embed calling. <strong>Decision:</strong> shipped the entire negotiation, NAT traversal, and call state machine <strong>as an SDK with a single entry point</strong> rather than exposing raw WebRTC primitives — so other teams could embed video calling without touching ICE candidates or SDP munging. The robot-side hardware integration and the iOS side <strong>shared the same call-state model</strong> rather than each maintaining its own — this killed an entire category of cross-device race conditions before they could happen, because there was no second state machine to drift out of sync. <strong>Result:</strong> other product teams embedded Zenbo↔iOS video calls with a handful of API calls; the SDK became the foundation of ASUS smart-robot calling capability.
+                    </p>
+                    <ul class="project-features">
+                        <li>Single-entry SDK over raw WebRTC primitives — protect consumers from ICE/SDP</li>
+                        <li>Shared call-state model across iOS and robot runtime — kills cross-device races structurally</li>
+                        <li>Cross-domain hardware integration on a non-standard iOS runtime</li>
+                        <li>Foundation of ASUS smart-robot calling capability</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Swift</span>
+                        <span>WebRTC</span>
+                        <span>VoIP</span>
+                        <span>APNS</span>
+                        <span>NAT Traversal</span>
+                        <span>Cross-platform SDK</span>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <div class="project-links">
+                            <span class="project-tag">iOS · Realtime · Crypto</span>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Real-time Multiplayer Game Networking Layer + E2E Encryption</h3>
+                    <p class="project-description">
+                        A real-time multiplayer game whose gameplay state had to remain consistent across players on lossy mobile networks, and which contained in-game financial flows that had to clear a strict pre-launch security audit. <strong>Decision:</strong> for the networking layer, chose to <strong>build the message framing and reconnection protocol on raw GCDAsyncSocket + Protocol Buffers</strong> rather than dropping in a generic socket library — because game frame ordering and partial-state replay needed packet semantics no general-purpose library would model correctly. For the financial flow, chose <strong>end-to-end encryption with OpenSSL ECDSA / ECDH on top of TLS</strong> rather than relying on TLS alone — so an intercepted payload remained unreadable even if the game&#39;s transport layer was compromised. The principle was &#39;don&#39;t outsource the parts where the game would die.&#39; <strong>Result:</strong> game state stayed consistent under unstable mobile network conditions; the financial flow cleared the project&#39;s pre-launch security audit on first pass.
+                    </p>
+                    <ul class="project-features">
+                        <li>Custom framing + reconnection on GCDAsyncSocket — over generic socket libraries</li>
+                        <li>Frame ordering and partial-state replay tuned to game semantics</li>
+                        <li>ECDSA / ECDH end-to-end encryption layered on top of TLS</li>
+                        <li>Cleared pre-launch security audit on first pass</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Objective-C</span>
+                        <span>Swift</span>
+                        <span>GCDAsyncSocket</span>
+                        <span>Protocol Buffers</span>
+                        <span>OpenSSL (ECDSA/ECDH)</span>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span>
+                Technical Skills
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <h3>Go Backend &amp; Distributed Systems</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Go (Gin · gRPC · pprof)</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Microservices · REST · gRPC</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Stateful Workflow Orchestration</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Retry/Backoff · Idempotency · Backpressure</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">TTL-based Distributed Locks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                        </svg>
+                    </div>
+                    <h3>Data, Messaging &amp; Observability</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">MongoDB (ESR Index Design · Aggregation)</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Kafka · NATS · Redis · SQS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Jaeger Distributed Tracing</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">ELK · Prometheus · Grafana</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Structured Logging</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                    </div>
+                    <h3>Cloud, Container &amp; Platform</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Kubernetes · Docker</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">AWS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Platform Control Plane Design</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Configuration Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" />
+                        </svg>
+                    </div>
+                    <h3>iOS &amp; Real-time Calling</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Swift · Objective-C · Combine</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">WebRTC · CallKit · VoIP Push · APNS</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">UIKit · SQLite · Realm</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">XCFramework · CocoaPods</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Public API Design · SDK Productization</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 3l1.9 5.8L19.5 10l-5.6 1.9L12 17.5l-1.9-5.6L4.5 10l5.6-1.2L12 3z" /><path d="M19 14l.7 2.1L22 17l-2.3.9L19 20l-.7-2.1L16 17l2.3-.9L19 14z" /><path d="M5 15l.5 1.5L7 17l-1.5.5L5 19l-.5-1.5L3 17l1.5-.5L5 15z" />
+                        </svg>
+                    </div>
+                    <h3>AI-Augmented Engineering</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Claude · Claude Code</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">MCP · Custom Skills &amp; Agents</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Cross-service Impact Analysis Skill</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Code-review &amp; Change-risk Templates</span>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Senior Judgement → Reusable Team Asset</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mentorship" class="section mentorship about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">05.</span>
+                Mentorship &amp; Knowledge Transfer
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I treat hard-earned domain knowledge as a team asset, not a personal monopoly. Whether it&#39;s VoIP triage, cross-service tracing, or AI-assisted development, I systematize what I&#39;ve learned so others can take ownership and the bus factor goes up.</p>
+                    <ul class="about-highlights">
+                        <li>Drove VoIP knowledge handover so call-related tickets shifted from &#39;only a few people can handle&#39; to &#39;multiple people can take over&#39; — codified troubleshooting (event tracing, remote logging, crash diagnosis) into a repeatable team process.</li>
+                        <li>Acted as the cross-team incident-tracing point of contact: when multi-service issues land, I help engineers from different domains trace flows end-to-end via Kafka events + Jaeger spans + structured logs, and pull the lesson back into shared playbooks.</li>
+                        <li>Mentor teammates on AI-augmented development workflows — how to scope context, when to delegate to AI, how to review AI-generated changes critically, and how to convert one-off solutions into reusable Skills/Agents the whole team can use.</li>
+                        <li>When there&#39;s technical disagreement, I optimize for the team converging on a defensible decision (with rationale documented), not for being right — so future engineers can re-evaluate the call when context changes.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ai-engineering" class="section ai-engineering about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">06.</span>
+                AI-Augmented Engineering
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p style="font-weight:600;color:#6366f1;">Turning senior judgement into reusable, auditable team skills.</p>
+                    <p>AI-augmented engineering is a core part of how I work — not a side experiment. I use Claude / Claude Code as a daily collaborator and invest in turning the parts that worked into shareable Skills, MCP tools, and review templates the rest of the team can rely on.</p>
+                    <ul class="about-highlights">
+                        <li><strong>Cross-service impact analysis Skill</strong>: given a code change, walk the call graph across the platform&#39;s Go microservices and surface the realistic blast radius before merge — turning &#39;who knows the system best&#39; from a person into a process.</li>
+                        <li>Code-review and change-risk templates that encode my own senior review heuristics (consistency, retry/idempotency, observability, blast radius), so AI review pre-screens PRs before a human reviewer gets involved.</li>
+                        <li>Custom MCP tools and Agents that wrap recurring backend ops tasks (incident triage, slow-query analysis, config-change validation) so the same investigation doesn&#39;t have to be redone from scratch each time.</li>
+                    </ul>
+                    <ul class="about-highlights" style="margin-top:12px;">
+                        <li>Reviewers don&#39;t need to ask &#39;did you consider X?&#39; — the templates already enforce X.</li>
+                        <li>Senior judgement is no longer trapped in one person&#39;s head; it lives in repo as auditable Skills and prompts.</li>
+                        <li>New teammates ramp up faster because the team&#39;s review heuristics are explicit and reusable.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section education">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">07.</span>
                 Education
             </h2>
             <div class="education-card">
@@ -345,330 +690,18 @@ func main() {
         </div>
     </section>
 
-    <section id="skills" class="section skills">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">04.</span>
-                Skills
-            </h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                        </svg>
-                    </div>
-                    <h3>Programming Languages</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">Swift</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Go (Golang)</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Python</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <ellipse cx="12" cy="5" rx="9" ry="3" /><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" /><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
-                        </svg>
-                    </div>
-                    <h3>Databases</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">MongoDB</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Redis</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">SQLite</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                    </div>
-                    <h3>Cloud &amp; DevOps</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Kubernetes</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">Docker</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="skill-category">
-                    <div class="skill-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" />
-                        </svg>
-                    </div>
-                    <h3>iOS &amp; Real-time</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <span class="skill-name">WebRTC / CallKit</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">UIKit / Realm</span>
-                        </div>
-                        <div class="skill-item">
-                            <span class="skill-name">APNS / VoIP Push</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section projects">
-        <div class="container">
-            <h2 class="section-title">
-                <span class="title-number">05.</span>
-                Key Projects
-            </h2>
-            <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">iOS Core</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">CINNOX iOS Call Module</h3>
-                    <p class="project-description">
-                        Developed CINNOX iOS App core calling features, integrating WebRTC for real-time audio/video calls with CallKit for native calling experience and conference call support.
-                    </p>
-                    <ul class="project-features">
-                        <li>WebRTC audio/video call integration</li>
-                        <li>CallKit native call UI</li>
-                        <li>Conference call functionality</li>
-                        <li>Call transfer and recording features</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>WebRTC</span>
-                        <span>CallKit</span>
-                        <span>VoIP Push</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">iOS SDK</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Modular SDK Architecture</h3>
-                    <p class="project-description">
-                        Developed and maintained multiple core SDKs for CINNOX iOS App, implementing highly modular architecture to improve code reusability and maintainability.
-                    </p>
-                    <ul class="project-features">
-                        <li>Core SDK: Network layer, authentication and data sync</li>
-                        <li>Call SDK: VoIP calling core functionality</li>
-                        <li>UIKit: UI business logic and reusable components</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>CocoaPods</span>
-                        <span>Realm</span>
-                        <span>MQTT</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Automation</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Chat Auto-Pickup System</h3>
-                    <p class="project-description">
-                        Developed intelligent customer service auto-pickup feature to automatically assign chat inquiries based on staff status, improving response efficiency with seamless chatbot-to-human handoff.
-                    </p>
-                    <ul class="project-features">
-                        <li>Intelligent status detection and assignment</li>
-                        <li>Chatbot to human handoff mechanism</li>
-                        <li>Retry and fallback strategies</li>
-                        <li>Real-time push notifications</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Go</span>
-                        <span>WebSocket</span>
-                        <span>NATS</span>
-                        <span>MongoDB</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Performance</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Database Performance Optimization</h3>
-                    <p class="project-description">
-                        Identified and resolved MongoDB slow query issues through query plan analysis, compound index creation, and aggregation pipeline optimization, significantly improving system query performance.
-                    </p>
-                    <ul class="project-features">
-                        <li>Slow query analysis and optimization</li>
-                        <li>Compound index design</li>
-                        <li>Aggregation pipeline optimization</li>
-                        <li>Connection pool performance tuning</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>MongoDB</span>
-                        <span>Indexing</span>
-                        <span>Aggregation</span>
-                        <span>Profiling</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Award</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Environmental Push</h3>
-                    <p class="project-description">
-                        Taiwan EPA open data service App with 1M+ App Store downloads, consistently ranked in Weather Top 100, with 2,000+ daily active iOS users.
-                    </p>
-                    <ul class="project-features">
-                        <li>2017-2018 Information Month Top 100 Innovation Award</li>
-                        <li>2018 Smart City Innovation Award</li>
-                        <li>GPS location and Geofence tracking</li>
-                        <li>APNS real-time air quality push notifications</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>CoreLocation</span>
-                        <span>APNS</span>
-                        <span>MapKit</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Gov Project</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">i-Plants (Crop Field Management)</h3>
-                    <p class="project-description">
-                        Developed in collaboration with Taiwan Council of Agriculture to help farmers record agricultural processes from field cultivation to sales, generating traceability records.
-                    </p>
-                    <ul class="project-features">
-                        <li>Featured in media coverage</li>
-                        <li>GPS location and offline operation</li>
-                        <li>Traceability QRCode generation</li>
-                        <li>Field operation recording and upload</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>CoreData</span>
-                        <span>GPS</span>
-                        <span>Offline</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Freelance</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">iShopper E-Invoice</h3>
-                    <p class="project-description">
-                        E-invoice lottery and scanning platform App, providing invoice QRCode scanning, carrier barcode generation, receipt list retrieval and prize calculation.
-                    </p>
-                    <ul class="project-features">
-                        <li>Invoice QRCode scanning</li>
-                        <li>Mobile carrier integration</li>
-                        <li>Ministry of Finance API integration</li>
-                        <li>Auto prize checking and notifications</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>AVFoundation</span>
-                        <span>REST API</span>
-                        <span>QRCode</span>
-                    </div>
-                </article>
-
-                <article class="project-card">
-                    <div class="project-header">
-                        <svg class="project-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" />
-                        </svg>
-                        <div class="project-links">
-                            <span class="project-tag">Freelance</span>
-                        </div>
-                    </div>
-                    <h3 class="project-title">Acer Halo Smart Speaker</h3>
-                    <p class="project-description">
-                        iOS control application for Acer Smart Speaker, providing device pairing, voice assistant control features.
-                    </p>
-                    <ul class="project-features">
-                        <li>Device pairing and binding flow</li>
-                        <li>Smart speaker remote control</li>
-                        <li>WiFi configuration feature</li>
-                        <li>Voice assistant integration</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Swift</span>
-                        <span>Bluetooth</span>
-                        <span>mDNS</span>
-                        <span>IoT</span>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
     <section id="contact" class="section contact">
         <div class="container">
             <h2 class="section-title">
-                <span class="title-number">06.</span>
+                <span class="title-number">08.</span>
                 Get In Touch
             </h2>
             <div class="contact-content">
                 <p class="contact-text">
-                    I am currently looking for new career opportunities, especially in Senior Backend Engineer roles. If you have any collaboration opportunities or ideas, feel free to contact me!
+                    I&#39;m actively exploring Senior Software Engineer opportunities where I can apply distributed backend expertise, iOS SDK productization experience, and AI-augmented engineering practices. Open to roles involving high-concurrency systems, platform engineering, real-time communication, or developer-facing SDKs. Based in Taipei, Taiwan. Let&#39;s connect!
+                </p>
+                <p class="contact-text" style="margin-top:8px;font-size:0.95em;opacity:0.85;">
+                    📍 Taipei, Taiwan &nbsp;·&nbsp; Chinese (Native) &nbsp;·&nbsp; English (Professional Working)
                 </p>
                 <div class="contact-links">
                     <a href="mailto:sky0926a@gmail.com" class="contact-btn">
